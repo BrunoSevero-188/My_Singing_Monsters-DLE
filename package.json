@@ -1,0 +1,10 @@
+{
+  "name": "msmdle",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync-wiki.mjs",
+    "inspect": "node scripts/sync-wiki.mjs --inspect Noggin",
+    "dev": "npx serve ."
+  }
+}
