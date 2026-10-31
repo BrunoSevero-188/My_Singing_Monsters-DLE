@@ -5,6 +5,8 @@
   "scripts": {
     "sync": "node scripts/sync-wiki.mjs",
     "inspect": "node scripts/sync-wiki.mjs --inspect Noggin",
+    "schedule": "node scripts/make-schedule.mjs",
+    "check": "npm run check",
     "dev": "npx serve ."
   }
 }

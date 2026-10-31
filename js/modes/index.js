@@ -1,7 +1,7 @@
 import classic from './classic.js';
 import inverted from './inverted.js';
 import { createChoiceMode } from './choice.js';
-import { ISLANDS, TYPES } from '../data/monsters.js';
+import { getIslands, getTypes } from '../data/monsters.js';
 
 const island = createChoiceMode({
   id: 'island',
@@ -9,7 +9,7 @@ const island = createChoiceMode({
   description: 'Em qual ilha esse monstro vive?',
   question: (m) => `Em qual ilha vive o ${m.name}?`,
   field: 'islands',
-  options: () => ISLANDS,
+  options: () => getIslands,
 });
 
 const type = createChoiceMode({
@@ -18,7 +18,7 @@ const type = createChoiceMode({
   description: 'Qual é o tipo desse monstro?',
   question: (m) => `Qual é o tipo do ${m.name}?`,
   field: 'type',
-  options: () => TYPES,
+  options: () => getTypes,
 });
 
 export const MODES = [classic, inverted, island, type];
