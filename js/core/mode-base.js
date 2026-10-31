@@ -1,3 +1,4 @@
+import { infobox } from '../ui/infobox.js';
 import { MONSTERS } from '../data/monsters.js';
 import { pickDaily } from './daily.js';
 import { getState, saveState, registerWin, getStats } from './storage.js';
@@ -34,16 +35,16 @@ export function winBanner(label, ctx) {
   const box = document.createElement('div');
   box.className = 'win';
   const st = ctx.stats();
-  box.innerHTML = `<h3>🎉 Você acertou: ${ctx.answer.name}!</h3>
-    <p>Tentativas: ${ctx.state.guesses.length} · Sequência: ${st.streak} · Vitórias: ${st.wins}</p>
-    <p><a href="${ctx.answer.wiki}" target="_blank" rel="noopener">Ver ${ctx.answer.name} na wiki</a></p>`;
+  box.innerHTML = `<h3>🎉 Você acertou!</h3>
+    <p>Tentativas: ${ctx.state.guesses.length} · Sequência: ${st.streak} · Vitórias: ${st.wins}</p>`;
+  box.append(infobox(ctx.answer));
   const btn = document.createElement('button');
   btn.textContent = 'Compartilhar resultado';
   btn.onclick = async () => {
     await navigator.clipboard.writeText(shareText(label, ctx.state));
     btn.textContent = 'Copiado!';
   };
-  box.appendChild(btn);
+  box.append(btn);
   return box;
 }
 

@@ -44,7 +44,9 @@ export default {
         const td = document.createElement('td');
         td.className = compare(m, ctx.answer, c.key) + (animate ? ' flip' : '');
         td.style.animationDelay = `${i * 0.3}s`;
-        td.textContent = [].concat(m[c.key]).join(', ');
+        if (c.key === 'elements' || c.key === 'type') {
+           td.replaceChildren(...[].concat(m[c.key] ?? []).map(chip));
+            } else { td.textContent = format(m, c.key) + (r === 'higher' ? ' ↑' : r === 'lower' ? ' ↓' : ''); }
         tr.append(td);
       });
       rows.prepend(tr);

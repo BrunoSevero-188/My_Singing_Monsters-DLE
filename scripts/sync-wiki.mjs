@@ -131,6 +131,21 @@ async function fetchImages(titles) {
   return map;
 }
 
+async function fetchFacts(titles) {
+  const facts = {};
+  for (let i = 0; i < titles.length; i += 20) {
+    try {
+      const r = await api({
+        action: 'query', prop: 'extracts', exintro: '1', explaintext: '1',
+        exsentences: '2', exlimit: '20', titles: titles.slice(i, i + 20).join('|'), redirects: '1',
+      });
+      for (const p of r.query?.pages ?? []) if (p.extract) facts[p.title] = p.extract.trim();
+      for (const rd of r.query?.redirects ?? []) if (facts[rd.to]) facts[rd.from] = facts[rd.to];
+    } catch { /* extensão indisponível: segue sem curiosidades */ }
+  }
+  return facts;
+}
+
 async function download(url, file) {
   const res = await fetch(url, { headers: UA });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);

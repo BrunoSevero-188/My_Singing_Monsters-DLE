@@ -1,7 +1,9 @@
 :root {
   --bg: #14102b; --card: #221b45; --text: #f1eefc; --accent: #ffb800;
   --ok: #2ea44f; --mid: #e0a100; --bad: #c0392b;
+  --box: #1b1538; --line: #3a2f73; 
 }
+
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; }
 header { text-align: center; padding: 20px 12px 8px; }
@@ -52,3 +54,66 @@ table.hints { width: 100%; border-collapse: separate; border-spacing: 6px; text-
 .win { text-align: center; background: var(--card); border: 2px solid var(--accent); border-radius: 14px;
   padding: 16px; margin: 16px 0; }
 .win button { border-color: var(--accent); }
+
+/* Caixas com título, como as seções da wiki */
+.box { background: var(--box); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; margin: 16px 0; }
+.box-title { margin: 0 0 12px; padding-bottom: 6px; font-size: .95rem; letter-spacing: .6px;
+  text-transform: uppercase; color: var(--accent); border-bottom: 2px solid var(--line); }
+
+/* Cards de desafio na tela inicial */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.tile { display: flex; flex-direction: column; gap: 6px; text-align: left; padding: 14px; cursor: pointer;
+  background: var(--card); color: var(--text); border: 2px solid var(--line); border-radius: 12px; font: inherit; }
+.tile:hover { border-color: var(--accent); }
+.tile.done { border-color: var(--ok); }
+.tile-icon { font-size: 1.8rem; }
+.tile small { opacity: .75; }
+.tile-status { margin-top: auto; font-size: .8rem; font-weight: 700; color: var(--accent); }
+.tile.done .tile-status { color: #6fdc8c; }
+.yesterday { margin: 0; padding-left: 18px; line-height: 1.8; }
+.yesterday a { color: var(--accent); }
+
+/* Chips */
+.chip { display: inline-block; margin: 2px; padding: 2px 10px; border-radius: 999px;
+  font-size: .78rem; font-weight: 700; color: #fff; background: #4a4470; }
+.chip[data-k="plant"]   { background: #3f9a45; }
+.chip[data-k="cold"]    { background: #5fb7e5; color: #112; }
+.chip[data-k="air"]     { background: #b58be0; }
+.chip[data-k="water"]   { background: #2f7de1; }
+.chip[data-k="earth"]   { background: #8a5a34; }
+.chip[data-k="fire"]    { background: #e2571e; }
+.chip[data-k="energy"]  { background: #e0b800; color: #222; }
+.chip[data-k="light"]   { background: #f3e08a; color: #222; }
+.chip[data-k="psychic"] { background: #8e4fd0; }
+.chip[data-k="faerie"]  { background: #e86fb5; }
+.chip[data-k="bone"]    { background: #9a9a9a; color: #111; }
+.chip[data-k="plasma"]  { background: #1fb5a5; }
+.chip[data-k="shadow"]  { background: #4b3f6b; }
+.chip[data-k="natural"]   { background: #3f8f5a; }
+.chip[data-k="magical"]   { background: #8a5bd6; }
+.chip[data-k="ethereal"]  { background: #4ac3d1; color: #112; }
+.chip[data-k="mythical"]  { background: #c9a227; color: #222; }
+.chip[data-k="seasonal"]  { background: #d65a5a; }
+.chip[data-k="wublin"]    { background: #6a4cff; }
+.chip[data-k="celestial"] { background: #2a3a7a; }
+.chip[data-k="amber"]     { background: #d98e04; color: #222; }
+
+/* Infobox do monstro */
+.infobox { max-width: 320px; margin: 14px auto; text-align: left; background: var(--box);
+  border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.infobox-head { padding: 8px 12px; text-align: center; font-weight: 800; background: #4a4470; }
+.infobox-head[data-k="natural"]   { background: #3f8f5a; }
+.infobox-head[data-k="magical"]   { background: #8a5bd6; }
+.infobox-head[data-k="ethereal"]  { background: #2c97a4; }
+.infobox-head[data-k="fire"]      { background: #e2571e; }
+.infobox-head[data-k="mythical"]  { background: #a8861c; }
+.infobox-img { display: block; width: 160px; height: 160px; margin: 12px auto; object-fit: contain; }
+.infobox-row { display: flex; gap: 8px; padding: 6px 12px; border-top: 1px solid var(--line); font-size: .9rem; }
+.infobox-label { flex: 0 0 76px; opacity: .7; font-weight: 700; }
+.infobox-value { flex: 1; }
+.infobox-fact { margin: 0; padding: 10px 12px; border-top: 1px solid var(--line); font-size: .85rem; opacity: .85; }
+.infobox-link { display: block; padding: 8px 12px; text-align: center; color: var(--accent);
+  border-top: 1px solid var(--line); text-decoration: none; font-weight: 700; }
+
+/* Sobre os chips dentro das células da tabela de dicas */
+.hints td .chip { background-color: rgba(0, 0, 0, .35); }
