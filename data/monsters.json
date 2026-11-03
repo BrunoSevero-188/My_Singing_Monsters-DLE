@@ -388,8 +388,8 @@
     "elementos": ["Ar","Planta","Terra","Água"],
     "versao": "1.0.3",
     "ano": 2012,
-    "icone": "assets/monsters/shellbeat.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/3d/Shellbeat_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162151",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/bc/ShellbeatIdle.gif/revision/latest?cb=20240914025342"
   },
   {
     "id": 27,
@@ -418,8 +418,8 @@
     "elementos": ["Ar","Planta","Água","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/deedge.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/9/9f/Deedge_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162252",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/DeedgeIdle.gif/revision/latest?cb=20240913202619"
   },
   {
     "id": 29,
@@ -433,8 +433,8 @@
     "elementos": ["Ar","Terra","Água","Frio"],
     "versao": "1.0.2",
     "ano": 2012,
-    "icone": "assets/monsters/riff.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/2e/Riff_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162418",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/41/RiffIdle.gif/revision/latest?cb=20240914025258"
   },
   {
     "id": 30,
@@ -448,8 +448,8 @@
     "elementos": ["Planta","Terra","Água","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/entbrat.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/64/Entbrat_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162639",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/02/EntbratIdle.gif/revision/latest?cb=20241030032212"
   },
   {
     "id": 31,
@@ -461,7 +461,7 @@
     "elementos": ["Ar","Planta","Terra","Água","Frio"],
     "versao": "4.3.0",
     "ano": 2024,
-    "icone": "assets/monsters/mimic.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/9/97/Mimic_Portrait.png/revision/latest/scale-to-width-down/60?cb=20250112045703",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a4/MimicIdle.gif/revision/latest?cb=20240918135929"
   }
 ]   
