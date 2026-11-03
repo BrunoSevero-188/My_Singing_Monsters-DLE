@@ -313,8 +313,8 @@
     "elementos": ["Ar","Água","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/congle.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e1/Congle_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162508",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c9/CongleIdle.gif/revision/latest?cb=20240918032547"
   },
   {
     "id": 22,
@@ -343,8 +343,8 @@
     "elementos": ["Planta","Terra","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/clamble.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/Clamble_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162655",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/8/8f/ClambleIdle.gif/revision/latest?cb=20241116035004"
   },
   {
     "id": 24,
@@ -358,8 +358,8 @@
     "elementos": ["Planta","Água","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/bowgart.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e3/Bowgart_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162751",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/09/BowgartIdle.gif/revision/latest?cb=20240913204808"
   },
   {
     "id": 25,
@@ -373,8 +373,8 @@
     "elementos": ["Terra","Água","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/t-rox.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/ca/T-Rox_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162918",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a5/T-RoxIdle.gif/revision/latest?cb=20240917104253"
   },
   {
     "id": 26,
