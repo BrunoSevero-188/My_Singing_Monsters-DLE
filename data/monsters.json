@@ -403,8 +403,8 @@
     "elementos": ["Ar","Planta","Terra","Frio"],
     "versao": "1.1.0",
     "ano": 2012,
-    "icone": "assets/monsters/quarrister.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4f/Quarrister_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162208",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c9/QuarristerIdle.gif/revision/latest?cb=20240914025507"
   },
   {
     "id": 28,
