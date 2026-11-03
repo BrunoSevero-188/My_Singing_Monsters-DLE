@@ -1,12 +1,12 @@
 {
   "name": "msmdle",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
+  "description": "MSMdle: desafios diários de My Singing Monsters, feitos por brasileiros e em português do Brasil.",
   "scripts": {
-    "sync": "node scripts/sync-wiki.mjs",
-    "inspect": "node scripts/sync-wiki.mjs --inspect Noggin",
-    "schedule": "node scripts/make-schedule.mjs",
-    "check": "npm run check",
-    "dev": "npx serve ."
+    "dev": "npx serve .",
+    "check": "node scripts/check.mjs",
+    "test": "node --test"
   }
 }

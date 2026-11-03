@@ -1,3 +1,6 @@
+import { label } from '../i18n.js';
+import { fmtDate } from '../core/compare.js';
+
 const el = (tag, cls, text) => {
   const e = document.createElement(tag);
   if (cls) e.className = cls;
@@ -7,18 +10,18 @@ const el = (tag, cls, text) => {
 
 const key = (s) => String(s).toLowerCase().replace(/[^a-z]/g, '');
 
-// Chip colorido (a cor vem do CSS pelo data-k)
-export function chip(text) {
-  const s = el('span', 'chip', text);
-  s.dataset.k = key(text);
+// Chip colorido. A cor vem do valor original (inglês); o texto vem traduzido (kind: element | class | island)
+export function chip(value, kind) {
+  const s = el('span', 'chip', label(kind, value));
+  s.dataset.k = key(value);
   return s;
 }
 
-const row = (label, ...nodes) => {
+const row = (name, ...nodes) => {
   const r = el('div', 'infobox-row');
   const v = el('span', 'infobox-value');
   v.append(...nodes);
-  r.append(el('span', 'infobox-label', label), v);
+  r.append(el('span', 'infobox-label', name), v);
   return r;
 };
 
@@ -27,7 +30,7 @@ export function infobox(m) {
   const box = el('aside', 'infobox');
 
   const head = el('div', 'infobox-head', m.name);
-  head.dataset.k = key(m.type);
+  head.dataset.k = key([].concat(m.type)[0]);
 
   const img = document.createElement('img');
   img.src = m.image;
@@ -35,9 +38,13 @@ export function infobox(m) {
   img.className = 'infobox-img';
   img.onerror = () => { img.style.visibility = 'hidden'; };
 
-  box.append(head, img, row('Classe', chip(m.type)), row('Elementos', ...m.elements.map(chip)), row('Ilhas', ...m.islands.map(chip)));
-  if (m.level != null) box.append(row('Nível', document.createTextNode(String(m.level))));
-  if (m.fact) box.append(el('p', 'infobox-fact', m.fact));
+  box.append(
+    head, img,
+    row('Classe', ...[].concat(m.type).map((v) => chip(v, 'class'))),
+    row('Elementos', ...m.elements.map((v) => chip(v, 'element'))),
+    row('Ilhas', ...m.islands.map((v) => chip(v, 'island'))),
+  );
+  if (m.releaseDate) box.append(row('Lançamento', document.createTextNode(fmtDate(m.releaseDate))));
 
   const a = el('a', 'infobox-link', 'Ver na wiki ↗');
   a.href = m.wiki;

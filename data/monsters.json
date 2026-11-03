@@ -1,1 +1,651 @@
-[]
+[
+  {
+    "id": 1,
+    "nome": "Tweedle",
+    "ilhas": [
+      "Cold Island",
+      "Air Island",
+      "Water Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Fire Oasis",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 2,
+    "nome": "Potbelly",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "Water Island",
+      "Earth Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Light Island",
+      "Psychic Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 3,
+    "nome": "Noggin",
+    "ilhas": [
+      "Plant Island",
+      "Air Island",
+      "Water Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Faerie Island",
+      "Bone Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Earth"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 4,
+    "nome": "Toe Jammer",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "Air Island",
+      "Water Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Oasis",
+      "Psychic Island",
+      "Bone Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 5,
+    "nome": "Mammott",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "Air Island",
+      "Earth Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Oasis",
+      "Light Island",
+      "Faerie Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 6,
+    "nome": "Dandidoo",
+    "ilhas": [
+      "Cold Island",
+      "Water Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 7,
+    "nome": "Cybop",
+    "ilhas": [
+      "Air Island",
+      "Water Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Earth"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 8,
+    "nome": "Quibble",
+    "ilhas": [
+      "Cold Island",
+      "Air Island",
+      "Water Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Oasis",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 9,
+    "nome": "Pango",
+    "ilhas": [
+      "Cold Island",
+      "Air Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Oasis",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 10,
+    "nome": "Shrubb",
+    "ilhas": [
+      "Plant Island",
+      "Water Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Earth"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 11,
+    "nome": "Oaktopus",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "Water Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Psychic Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 12,
+    "nome": "Furcorn",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "Earth Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Light Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 13,
+    "nome": "Fwog",
+    "ilhas": [
+      "Plant Island",
+      "Air Island",
+      "Water Island",
+      "The Colossingum",
+      "Gold Island",
+      "Bone Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Earth",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 14,
+    "nome": "Drumpler",
+    "ilhas": [
+      "Plant Island",
+      "Air Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Faerie Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Earth",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 15,
+    "nome": "Maw",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "Air Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Oasis",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 16,
+    "nome": "Reedling",
+    "ilhas": [
+      "Water Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Haven",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Earth"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 17,
+    "nome": "Spunge",
+    "ilhas": [
+      "Cold Island",
+      "Water Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 18,
+    "nome": "Thumpies",
+    "ilhas": [
+      "Cold Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 19,
+    "nome": "Scups",
+    "ilhas": [
+      "Air Island",
+      "Water Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Earth",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 20,
+    "nome": "PomPom",
+    "ilhas": [
+      "Air Island",
+      "Earth Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Earth",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 21,
+    "nome": "Congle",
+    "ilhas": [
+      "Cold Island",
+      "Air Island",
+      "The Colossingum",
+      "Gold Island",
+      "Fire Oasis",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 22,
+    "nome": "Pummel",
+    "ilhas": [
+      "Plant Island",
+      "Water Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Earth",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 23,
+    "nome": "Clamble",
+    "ilhas": [
+      "Plant Island",
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Earth",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 24,
+    "nome": "Bowgart",
+    "ilhas": [
+      "Plant Island",
+      "Cold Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 25,
+    "nome": "T-Rox",
+    "ilhas": [
+      "Plant Island",
+      "Air Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Earth",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 26,
+    "nome": "Shellbeat",
+    "ilhas": [
+      "Water Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Earth",
+      "Water"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 27,
+    "nome": "Quarrister",
+    "ilhas": [
+      "Earth Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Earth",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 28,
+    "nome": "Deedge",
+    "ilhas": [
+      "Cold Island",
+      "Shugabush Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 29,
+    "nome": "Riff",
+    "ilhas": [
+      "Air Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Earth",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 30,
+    "nome": "Entbrat",
+    "ilhas": [
+      "Plant Island",
+      "The Colossingum",
+      "Gold Island",
+      "Tribal Island",
+      "Composer Island",
+      "Mirror Map"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Plant",
+      "Earth",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  },
+  {
+    "id": 31,
+    "nome": "Mimic",
+    "ilhas": [
+      "Fire Oasis"
+    ],
+    "classe": "Natural",
+    "elementos": [
+      "Air",
+      "Plant",
+      "Earth",
+      "Water",
+      "Cold"
+    ],
+    "lancamento": null
+  }
+]

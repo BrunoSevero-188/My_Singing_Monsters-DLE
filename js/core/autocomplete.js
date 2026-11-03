@@ -6,7 +6,13 @@ export function createAutocomplete({ input, list, getOptions, onSelect }) {
 
   function render() {
     const q = norm(input.value.trim());
-    items = q ? getOptions().filter((m) => norm(m.name).includes(q)).slice(0, 8) : [];
+    items = q
+      ? getOptions()
+          .filter((m) => norm(m.name).includes(q))
+          .sort((a, b) => norm(b.name).startsWith(q) - norm(a.name).startsWith(q))
+          .slice(0, 8)
+      : [];
+
     list.innerHTML = '';
     items.forEach((m, i) => {
       const li = document.createElement('li');
@@ -15,6 +21,15 @@ export function createAutocomplete({ input, list, getOptions, onSelect }) {
       li.addEventListener('mousedown', (e) => { e.preventDefault(); pick(m); });
       list.appendChild(li);
     });
+
+    if (q && !items.length) {
+      const li = document.createElement('li');
+      li.className = 'empty';
+      li.textContent = 'Nenhum monstro encontrado.';
+      list.appendChild(li);
+      list.hidden = false;
+      return;
+    }
     list.hidden = items.length === 0;
   }
 

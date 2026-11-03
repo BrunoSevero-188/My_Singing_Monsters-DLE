@@ -1,21 +1,26 @@
 import { MODES } from '../modes/index.js';
 import { MONSTERS } from '../data/monsters.js';
 import { getState, getStats } from '../core/storage.js';
-import { answerFor, yesterdayKey } from '../core/daily.js';
+import { answerFor, yesterdayKey, dayNumber } from '../core/daily.js';
+import { renderHero } from './hero.js';
+import { renderStats } from './stats.js';
+import { renderSettings } from './settings.js';
 
 const ICONS = { classic: '🎯', inverted: '🌗', island: '🏝️', type: '🎼' };
 
 export function renderHome(root, onOpen) {
   root.innerHTML = `
-    <p class="desc">Desafios diários de My Singing Monsters. Um monstro novo por dia, em cada modo.</p>
     <section class="box">
-      <h2 class="box-title">Desafios de hoje</h2>
+      <h2 class="box-title">Desafios de hoje · #${dayNumber()}</h2>
       <div class="tiles" id="tiles"></div>
     </section>
     <section class="box">
       <h2 class="box-title">Respostas de ontem</h2>
       <ul class="yesterday" id="yest"></ul>
-    </section>`;
+    </section>
+    <div id="stats"></div>
+    <div id="settings"></div>`;
+  root.prepend(renderHero());
 
   const tiles = root.querySelector('#tiles');
   const yest = root.querySelector('#yest');
@@ -34,10 +39,8 @@ export function renderHome(root, onOpen) {
     tile.onclick = () => onOpen(mode.id);
     tiles.append(tile);
 
-    // resposta de ontem (usa o mesmo pool do modo)
     const pool = MONSTERS.filter(mode.pool ?? (() => true));
-    const list = pool.length ? pool : MONSTERS;
-    const m = answerFor(list, mode.id, yesterdayKey());
+    const m = answerFor(pool.length ? pool : MONSTERS, mode.id, yesterdayKey());
     if (m) {
       const li = document.createElement('li');
       const a = document.createElement('a');
@@ -49,4 +52,7 @@ export function renderHome(root, onOpen) {
       yest.append(li);
     }
   });
+
+  renderStats(root.querySelector('#stats'));
+  renderSettings(root.querySelector('#settings'));
 }

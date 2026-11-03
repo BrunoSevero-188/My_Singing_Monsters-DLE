@@ -1,42 +1,53 @@
 import { createAutocomplete } from '../core/autocomplete.js';
-import { startMode, winBanner, monsterImg } from '../core/mode-base.js';
-
-const MAX_BLUR = 16; // px
-const STEP = 3;      // reduz o desfoque a cada erro
+import { startMode, winBanner, mysteryImg, yesterdayLine } from '../core/mode-base.js';
+import { BLUR } from '../config.js';
+import { getSettings } from '../core/settings.js';
+import { CLUE_DEFS } from '../core/clue-defs.js';
+import { createClues } from '../ui/clues.js';
 
 export default {
   id: 'inverted',
   label: 'Monstro invertido',
-  description: 'Quem é esse monstro? A imagem está com as cores invertidas e embaçada. A cada erro ela fica mais nítida.',
+  description: 'Quem é esse monstro? A imagem está com as cores invertidas e embaçada. A cada erro ela fica um pouco mais nítida.',
   render(root) {
     const ctx = startMode('inverted', 'inverted');
     root.innerHTML = `
       <p class="desc">${this.description}</p>
+      <div id="yesterday"></div>
       <div class="inverted-box" id="box"></div>
       <div class="search"><input id="in" placeholder="Qual é o monstro?" autocomplete="off" />
       <ul id="list" hidden></ul></div>
+      <div id="clues"></div>
       <ul class="wrong-list" id="wrong"></ul>
       <div id="result"></div>`;
 
-    const box = root.querySelector('#box');
-    const input = root.querySelector('#in');
-    const wrongList = root.querySelector('#wrong');
-    const img = monsterImg(ctx.answer, 'mystery');
-    box.append(img);
+    const q = (s) => root.querySelector(s);
+    const input = q('#in');
+    const wrongList = q('#wrong');
+    const img = mysteryImg(ctx.answer, 'mystery');
+    q('#box').append(img);
+    q('#yesterday').append(yesterdayLine(ctx));
+
+    const clues = createClues(CLUE_DEFS.inverted, ctx);
+    q('#clues').append(clues.el);
 
     const wrongs = () => ctx.state.guesses.filter((id) => id !== ctx.answer.id);
 
+    // Desfoque: começa em BLUR.start, perde BLUR.step por erro, nunca abaixo de BLUR.min até acertar
     const applyFilter = () => {
       if (ctx.state.won) { img.style.filter = 'none'; return; }
-      const blur = Math.max(0, MAX_BLUR - wrongs().length * STEP);
-      img.style.filter = `invert(1) blur(${blur}px)`;
+      const { keepBlur, grey } = getSettings();
+      const blur = keepBlur ? BLUR.start : Math.max(BLUR.min, BLUR.start - wrongs().length * BLUR.step);
+      img.style.filter = `invert(1) blur(${blur.toFixed(1)}px)${grey ? ' grayscale(1)' : ''}`;
     };
 
     const renderWrong = () => {
       wrongList.innerHTML = '';
       wrongs().forEach((id) => {
+        const m = ctx.monsters.find((x) => x.id === id);
+        if (!m) return;
         const li = document.createElement('li');
-        li.textContent = ctx.monsters.find((m) => m.id === id).name;
+        li.textContent = m.name;
         wrongList.prepend(li);
       });
     };
@@ -44,7 +55,8 @@ export default {
     const finish = () => {
       input.disabled = true;
       applyFilter();
-      root.querySelector('#result').replaceChildren(winBanner(this.label, ctx));
+      clues.update();
+      q('#result').replaceChildren(winBanner(this.label, ctx));
     };
 
     applyFilter();
@@ -53,13 +65,14 @@ export default {
 
     createAutocomplete({
       input,
-      list: root.querySelector('#list'),
+      list: q('#list'),
       getOptions: () => ctx.monsters.filter((m) => !ctx.state.guesses.includes(m.id)),
       onSelect: (m) => {
         const correct = m.id === ctx.answer.id;
         ctx.commit(m.id, correct);
         renderWrong();
         applyFilter();
+        clues.update();
         if (correct) finish();
       },
     });
