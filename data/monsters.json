@@ -238,8 +238,8 @@
     "elementos": ["Ar","Planta","Terra"],
     "versao": "1.0.3",
     "ano": 2012,
-    "icone": "assets/monsters/reedling.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/68/Reedling_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162130",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/34/ReedlingIdle.gif/revision/latest?cb=20240918002338"
   },
   {
     "id": 17,
@@ -253,8 +253,8 @@
     "elementos": ["Ar","Planta","Água"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/spunge.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/26/Spunge_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162222",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/3a/SpungeIdle.gif/revision/latest?cb=20240918002241"
   },
   {
     "id": 18,
@@ -268,8 +268,8 @@
     "elementos": ["Ar","Planta","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/thumpies.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/15/Thumpies_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162315",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/1f/ThumpiesIdle.gif/revision/latest?cb=20240918135417"
   },
   {
     "id": 19,
