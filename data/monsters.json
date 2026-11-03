@@ -11,8 +11,8 @@
     "elementos": ["Ar"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/tweedle.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/22/Tweedle_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101161901",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/db/TweedleIdle.gif/revision/latest?cb=20260401163337"
   },
   {
     "id": 2,
@@ -27,8 +27,8 @@
     "elementos": ["Planta"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/potbelly.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/7d/Potbelly_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162540",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/PotbellyIdle.gif/revision/latest?cb=20260401163356"
   },
   {
     "id": 3,
@@ -42,8 +42,8 @@
     "elementos": ["Terra"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/noggin.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/02/Noggin_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162823",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e2/NogginIdle.gif/revision/latest?cb=20260401163408"
   },
   {
     "id": 4,
@@ -57,8 +57,8 @@
     "elementos": ["Água"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/toe-jammer.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0a/Toe_Jammer_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101163010",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/ToeJammerIdle.gif/revision/latest?cb=20260401163416"
   },
   {
     "id": 5,
@@ -73,8 +73,8 @@
     "elementos": ["Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/mammott.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/25/Mammott_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101163053",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d4/MammottIdle.gif/revision/latest?cb=20260401163427"
   },
   {
     "id": 6,
@@ -88,8 +88,8 @@
     "elementos": ["Ar","Planta"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/dandidoo.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4b/Dandidoo_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101161958",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/13/DandidooIdle.gif/revision/latest?cb=20240913204934"
   },
   {
     "id": 7,
@@ -103,8 +103,8 @@
     "elementos": ["Ar","Terra"],
     "versao": "1.0.2",
     "ano": 2012,
-    "icone": "assets/monsters/cybop.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f1/Cybop_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162337",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/5/5c/CybopIdle.gif/revision/latest?cb=20241116034859"
   },
   {
     "id": 8,
@@ -118,8 +118,8 @@
     "elementos": ["Ar","Água"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/quibble.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d2/Quibble_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162453",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b6/QuibbleIdle.gif/revision/latest?cb=20240916024700"
   },
   {
     "id": 9,
@@ -133,8 +133,8 @@
     "elementos": ["Ar","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/pango.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/77/Pango_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162522",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/PangoIdle.gif/revision/latest?cb=20240916024740"
   },
   {
     "id": 10,
@@ -148,8 +148,8 @@
     "elementos": ["Planta","Terra"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/shrubb.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/42/Shrubb_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162601",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b7/ShrubbIdle.gif/revision/latest?cb=20241030032048"
   },
   {
     "id": 11,
@@ -163,8 +163,8 @@
     "elementos": ["Planta","Água"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/oaktopus.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0a/Oaktopus_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162729",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/61/OaktopusIdle.gif/revision/latest?cb=20240913204835"
   },
   {
     "id": 12,
@@ -178,8 +178,8 @@
     "elementos": ["Planta","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/furcorn.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/62/Furcorn_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162807",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/78/FurcornIdle.gif/revision/latest?cb=20241027041007"
   },
   {
     "id": 13,
@@ -193,8 +193,8 @@
     "elementos": ["Terra","Água"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/fwog.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0b/Fwog_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162857",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/FwogIdle.gif/revision/latest?cb=20240916024817"
   },
   {
     "id": 14,
@@ -328,8 +328,8 @@
     "elementos": ["Planta","Terra","Água"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/pummel.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b9/Pummel_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162617",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c5/PummelIdle.gif/revision/latest?cb=20240917104451"
   },
   {
     "id": 23,
