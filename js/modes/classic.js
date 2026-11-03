@@ -1,40 +1,62 @@
 import { createAutocomplete } from '../core/autocomplete.js';
-import { startMode, winBanner, monsterImg, yesterdayLine } from '../core/mode-base.js';
-import { compare, fmtDate, EMOJI } from '../core/compare.js';
+import { startMode, winBanner, yesterdayLine } from '../core/mode-base.js';
+import { compare, fmtVersion, fmtYear, EMOJI } from '../core/compare.js';
 import { CLUE_DEFS } from '../core/clue-defs.js';
 import { createClues } from '../ui/clues.js';
 import { chip } from '../ui/infobox.js';
 
-// Colunas depois do nome, na ordem em que aparecem
-//   Ilhas / Classe / Elementos: vermelho (errado) · laranja (quase) · verde (certo)
-//   Lançamento: vermelho (errado) ou verde (certo), com seta ↑ (lançado depois) ou ↓ (lançado antes)
+// Colunas depois do monstro, na ordem em que aparecem
+//   Ilhas / Classe / Elementos: verde (certo) · laranja (quase) · vermelho (errado)
+//   Versão / Ano: verde (certo) ou vermelho (errado) com uma seta grande ao fundo:
+//     ↑ o monstro do dia veio depois · ↓ o monstro do dia veio antes
 const COLUMNS = [
   { key: 'islands', label: 'Ilhas' },
   { key: 'type', label: 'Classe' },
   { key: 'elements', label: 'Elementos' },
-  { key: 'releaseDate', label: 'Lançamento' },
+  { key: 'version', label: 'Versão' },
+  { key: 'year', label: 'Ano' },
 ];
 
-function fillCell(td, m, key, result) {
-  if (key === 'elements') {
-    td.replaceChildren(...[].concat(m.elements).map((v) => chip(v, 'element')));
-  } else if (key === 'type') {
-    td.replaceChildren(...[].concat(m.type).map((v) => chip(v, 'class')));
-  } else if (key === 'islands') {
-    td.classList.add('islands-cell');
-    td.textContent = m.islands.join(', ');
-  } else if (key === 'releaseDate') {
-    td.textContent = fmtDate(m.releaseDate);
-    if (result === 'higher' || result === 'lower') {
-      const arrow = document.createElement('span');
-      arrow.className = 'arrow';
-      arrow.textContent = result === 'higher' ? '↑' : '↓';
-      td.title = result === 'higher'
-        ? 'O monstro do dia foi lançado depois deste'
-        : 'O monstro do dia foi lançado antes deste';
-      td.append(arrow);
-    }
+const TIPS = {
+  higher: 'O monstro do dia veio depois deste',
+  lower: 'O monstro do dia veio antes deste',
+};
+
+// Conteúdo de cada célula (o texto fica por cima da seta do fundo)
+function fillBody(body, m, key) {
+  if (key === 'elements') body.replaceChildren(...[].concat(m.elements).map((v) => chip(v, 'element')));
+  else if (key === 'type') body.replaceChildren(...[].concat(m.type).map((v) => chip(v, 'class')));
+  else if (key === 'islands') body.textContent = m.islands.join(', ');
+  else if (key === 'version') body.textContent = fmtVersion(m.version);
+  else if (key === 'year') body.textContent = fmtYear(m.year);
+}
+
+// Célula "Monstro": mostra o ÍCONE com borda verde (certo) ou vermelha (errado).
+// O nome aparece ao passar o mouse (ou ao tocar/focar) sobre a imagem.
+function monsterCell(m, result, animate) {
+  const cell = document.createElement('div');
+  cell.className = `cell mon-cell ${result}${animate ? ' flip' : ''}`;
+  cell.title = m.name;
+  cell.tabIndex = 0; // permite ver o nome também no celular (toque) e pelo teclado
+
+  const caption = document.createElement('span');
+  caption.className = 'caption';
+  caption.textContent = m.name;
+
+  if (m.icon) {
+    const img = document.createElement('img');
+    img.className = 'thumb';
+    img.src = m.icon;
+    img.alt = m.name;
+    img.referrerPolicy = 'no-referrer';
+    img.onerror = () => { img.remove(); cell.classList.add('noimg'); };
+    cell.append(img);
+  } else {
+    cell.classList.add('noimg'); // sem URL de ícone: mostra só o nome
   }
+
+  cell.append(caption);
+  return cell;
 }
 
 export default {
@@ -44,7 +66,7 @@ export default {
   render(root) {
     const ctx = startMode('classic', 'classic');
     const visible = () => COLUMNS.filter((c) => !ctx.state.hidden.includes(c.key));
-    const hasDates = ctx.monsters.some((m) => m.releaseDate);
+    const hasData = ctx.monsters.some((m) => m.version || m.year != null);
 
     root.innerHTML = `
       <p class="desc">${this.description}</p>
@@ -55,7 +77,7 @@ export default {
       <div class="classic-meta"><span id="count"></span><span id="pool"></span></div>
       <div class="legend">
         <span class="l-ok">Certo</span><span class="l-mid">Quase</span><span class="l-bad">Errado</span>
-        <span>↑ lançado depois</span><span>↓ lançado antes</span>
+        <span>↑ veio depois</span><span>↓ veio antes</span>
       </div>
       <div id="clues"></div>
       <div id="result"></div>
@@ -68,11 +90,11 @@ export default {
     const input = q('#in'), head = q('#head'), rows = q('#rows'), result = q('#result');
     const countEl = q('#count'), poolEl = q('#pool'), chBox = q('#challenger');
 
-    // Aviso só para quem está desenvolvendo (localhost): datas ainda não preenchidas
-    if (!hasDates && ['localhost', '127.0.0.1'].includes(location.hostname)) {
+    // Aviso só para quem está desenvolvendo (localhost)
+    if (!hasData && ['localhost', '127.0.0.1'].includes(location.hostname)) {
       const note = q('#devnote');
       note.hidden = false;
-      note.textContent = 'Aviso (só em localhost): nenhum monstro tem "lancamento" em data/monsters.json, então a coluna Lançamento fica cinza.';
+      note.textContent = 'Aviso (só em localhost): nenhum monstro tem "versao" ou "ano" em data/monsters.json, então essas colunas ficam cinza.';
     }
 
     q('#yesterday').append(yesterdayLine(ctx));
@@ -97,7 +119,7 @@ export default {
         b.textContent = c.label;
         b.onclick = () => {
           const next = off ? ctx.state.hidden.filter((k) => k !== c.key) : [...ctx.state.hidden, c.key];
-          if (COLUMNS.length - next.length < 1) return;
+          if (COLUMNS.length - next.length < 1) return; // mantém ao menos 1 coluna
           ctx.state.hidden = next;
           buildHead();
           renderChallenger();
@@ -117,34 +139,29 @@ export default {
     const addRow = (m, animate = true) => {
       const tr = document.createElement('tr');
 
-      // O ícone vem do campo próprio e revela o nome ao passar o mouse.
-      const nameTd = document.createElement('td');
-      nameTd.className = compare(m, ctx.answer, 'name') + (animate ? ' flip' : '');
-      const cell = document.createElement('div');
-      cell.className = 'name-cell';
-      const icon = monsterImg(m, 'thumb');
-      icon.title = m.name;
-      icon.setAttribute('aria-label', m.name);
-      const link = document.createElement(m.wiki ? 'a' : 'span');
-      link.className = 'name-link';
-      link.textContent = m.name;
-      if (m.wiki) { link.href = m.wiki; link.target = '_blank'; link.rel = 'noopener'; }
-      cell.append(icon, link);
-      nameTd.append(cell);
-      tr.append(nameTd);
+      const first = document.createElement('td');
+      first.append(monsterCell(m, compare(m, ctx.answer, 'name'), animate));
+      tr.append(first);
 
       visible().forEach((c, i) => {
         const td = document.createElement('td');
         const r = compare(m, ctx.answer, c.key);
-        td.className = r + (animate ? ' flip' : '');
-        td.style.animationDelay = `${(i + 1) * 0.3}s`;
-        if (c.key === 'islands') td.title = m.islands.join(', ');
-        fillCell(td, m, c.key, r);
+        const cell = document.createElement('div');
+        cell.className = `cell ${r}${c.key === 'islands' ? ' islands-cell' : ''}${animate ? ' flip' : ''}`;
+        cell.style.animationDelay = `${(i + 1) * 0.3}s`;
+        if (TIPS[r]) cell.title = TIPS[r];
+        else if (c.key === 'islands') cell.title = m.islands.join(', ');
+        const body = document.createElement('span');
+        body.className = 'cell-body';
+        fillBody(body, m, c.key);
+        cell.append(body);
+        td.append(cell);
         tr.append(td);
       });
       rows.prepend(tr);
     };
 
+    // Grade de emojis para compartilhar (últimos 10 palpites)
     const buildGrid = () => {
       const ids = ctx.state.guesses;
       const lines = ids.slice(-10).map((id) => {

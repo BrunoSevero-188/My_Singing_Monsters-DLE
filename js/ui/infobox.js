@@ -1,5 +1,6 @@
 import { label } from '../i18n.js';
-import { fmtDate } from '../core/compare.js';
+import { fmtVersion, fmtYear } from '../core/compare.js';
+import { searchLink } from '../config.js';
 
 const el = (tag, cls, text) => {
   const e = document.createElement(tag);
@@ -33,14 +34,10 @@ export function infobox(m) {
   head.dataset.k = key([].concat(m.type)[0]);
 
   const img = document.createElement('img');
-  img.src = m.gif || m.icon || m.image;
+  img.src = m.gif || m.icon; // o gif aparece quando o jogador acerta (sem gif, usa o ícone)
   img.alt = m.name;
-  img.title = m.name;
   img.className = 'infobox-img';
-  img.onerror = () => {
-    if (img.src !== m.icon && (m.icon || m.image)) img.src = m.icon || m.image;
-    else img.style.visibility = 'hidden';
-  };
+  img.onerror = () => { img.style.visibility = 'hidden'; };
 
   box.append(
     head, img,
@@ -48,10 +45,12 @@ export function infobox(m) {
     row('Elementos', ...m.elements.map((v) => chip(v, 'element'))),
     row('Ilhas', ...m.islands.map((v) => chip(v, 'island'))),
   );
-  if (m.releaseDate) box.append(row('Lançamento', document.createTextNode(fmtDate(m.releaseDate))));
+  if (m.version) box.append(row('Versão', document.createTextNode(fmtVersion(m.version))));
+  if (m.year != null) box.append(row('Ano', document.createTextNode(fmtYear(m.year))));
 
-  const a = el('a', 'infobox-link', 'Ver na wiki ↗');
-  a.href = m.wiki;
+  // "Pesquisar mais": abre a busca "My Singing Monsters, <nome>" no navegador do usuário
+  const a = el('a', 'infobox-link', 'Pesquisar mais ↗');
+  a.href = searchLink(m.name);
   a.target = '_blank';
   a.rel = 'noopener';
   box.append(a);

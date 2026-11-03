@@ -5,7 +5,7 @@ const el = (tag, cls, text) => {
   return e;
 };
 
-// defs: [{ id, label, after, reveal(monstro) }]
+// defs: [{ id, label, after, reveal(monstro, todosOsMonstros) }]
 export function createClues(defs, ctx) {
   const wrap = el('div', 'clues');
   const bar = el('div', 'clues-bar');
@@ -27,7 +27,7 @@ export function createClues(defs, ctx) {
     }));
     const cur = defs.find((d) => d.id === openId);
     panel.hidden = !cur;
-    panel.textContent = cur ? cur.reveal(ctx.answer) : '';
+    panel.textContent = cur ? cur.reveal(ctx.answer, ctx.monsters) : '';
   }
 
   update();

@@ -1,6 +1,6 @@
 import { SETTINGS_KEY } from '../config.js';
 
-const DEFAULTS = { colorblind: false, keepBlur: false, grey: false };
+const DEFAULTS = { colorblind: false, grey: false };
 let cache = null;
 
 export function getSettings() {

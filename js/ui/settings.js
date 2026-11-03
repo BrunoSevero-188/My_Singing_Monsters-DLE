@@ -7,8 +7,7 @@ export function renderSettings(root) {
     <section class="box">
       <h2 class="box-title">Configurações</h2>
       <label class="opt-row"><input type="checkbox" data-k="colorblind"> Modo daltônico (azul, amarelo e laranja)</label>
-      <label class="opt-row"><input type="checkbox" data-k="keepBlur"> Monstro invertido: manter o desfoque constante</label>
-      <label class="opt-row"><input type="checkbox" data-k="grey"> Monstro invertido: filtro cinza</label>
+      <label class="opt-row"><input type="checkbox" data-k="grey"> Ovo invertido: filtro cinza</label>
       <div class="data-actions">
         <button class="pill" id="exp">Exportar progresso</button>
         <button class="pill" id="imp">Importar progresso</button>

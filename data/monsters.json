@@ -3,453 +3,784 @@
     "id": 1,
     "nome": "Pintinho Piu",
     "ilhas": [
-      "Ilha de Frio","Ilha de Ar","Ilha de Água","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo","Oásis de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Oásis de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar"],
+    "elementos": [
+      "Ar"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/22/Tweedle_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101161901",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/db/TweedleIdle.gif/revision/latest?cb=20260401163337"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/db/TweedleIdle.gif/revision/latest?cb=20260401163337",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 2,
     "nome": "Planta Pança",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio","Ilha de Água","Ilha de Terra",
-      "Ilha de Açúcar-Bush","Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
-      "Ilha de Luz","Ilha Psíquica","Ilha Tribal","Ilha dos Compositores",
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Ilha de Luz",
+      "Ilha Psíquica",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
       "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta"],
+    "elementos": [
+      "Planta"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/7d/Potbelly_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162540",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/PotbellyIdle.gif/revision/latest?cb=20260401163356"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/PotbellyIdle.gif/revision/latest?cb=20260401163356",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 3,
     "nome": "Cabeça-Dura",
     "ilhas": [
-      "Ilha de Planta","Ilha de Ar","Ilha de Água","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo","Ilha das Fadas",
-      "Ilha de Osso","Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Ilha das Fadas",
+      "Ilha de Osso",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Terra"],
+    "elementos": [
+      "Terra"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/02/Noggin_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162823",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e2/NogginIdle.gif/revision/latest?cb=20260401163408"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e2/NogginIdle.gif/revision/latest?cb=20260401163408",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 4,
     "nome": "Dedo-Enroscado",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio","Ilha de Ar","Ilha de Água",
-      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo","Ilha Psíquica",
-      "Ilha de Osso","Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Oásis de Fogo",
+      "Ilha Psíquica",
+      "Ilha de Osso",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Água"],
+    "elementos": [
+      "Água"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0a/Toe_Jammer_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101163010",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/ToeJammerIdle.gif/revision/latest?cb=20260401163416"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/ToeJammerIdle.gif/revision/latest?cb=20260401163416",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 5,
     "nome": "Mamutinho",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio","Ilha de Ar","Ilha de Terra",
-      "Ilha de Açúcar-Bush","Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
-      "Ilha de Luz","Ilha das Fadas","Ilha Tribal","Ilha dos Compositores",
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Ilha de Terra",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Oásis de Fogo",
+      "Ilha de Luz",
+      "Ilha das Fadas",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
       "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Frio"],
+    "elementos": [
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/25/Mammott_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101163053",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d4/MammottIdle.gif/revision/latest?cb=20260401163427"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d4/MammottIdle.gif/revision/latest?cb=20260401163427",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 6,
     "nome": "Dandidão",
     "ilhas": [
-      "Ilha de Frio","Ilha de Água","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta"],
+    "elementos": [
+      "Ar",
+      "Planta"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4b/Dandidoo_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101161958",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/13/DandidooIdle.gif/revision/latest?cb=20240913204934"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/13/DandidooIdle.gif/revision/latest?cb=20240913204934",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 7,
     "nome": "Cibop",
     "ilhas": [
-      "Ilha de Ar","Ilha de Água","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Terra"],
+    "elementos": [
+      "Ar",
+      "Terra"
+    ],
     "versao": "1.0.2",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f1/Cybop_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162337",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/5/5c/CybopIdle.gif/revision/latest?cb=20241116034859"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/5/5c/CybopIdle.gif/revision/latest?cb=20241116034859",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 8,
     "nome": "Picuinha",
     "ilhas": [
-      "Ilha de Frio","Ilha de Ar","Ilha de Água","Ilha de Açúcar-Bush",
-      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Oásis de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Água"],
+    "elementos": [
+      "Ar",
+      "Água"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d2/Quibble_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162453",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b6/QuibbleIdle.gif/revision/latest?cb=20240916024700"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b6/QuibbleIdle.gif/revision/latest?cb=20240916024700",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 9,
     "nome": "Panguim",
     "ilhas": [
-      "Ilha de Frio","Ilha de Ar","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Oásis de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Frio"],
+    "elementos": [
+      "Ar",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/77/Pango_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162522",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/PangoIdle.gif/revision/latest?cb=20240916024740"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/PangoIdle.gif/revision/latest?cb=20240916024740",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 10,
     "nome": "Arbusto",
     "ilhas": [
-      "Ilha de Planta","Ilha de Água","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Terra"],
+    "elementos": [
+      "Planta",
+      "Terra"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/42/Shrubb_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162601",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b7/ShrubbIdle.gif/revision/latest?cb=20241030032048"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b7/ShrubbIdle.gif/revision/latest?cb=20241030032048",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 11,
     "nome": "Carvalho-Polvo",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio","Ilha de Água","Ilha de Açúcar-Bush",
-      "Coliseu da Canção","Ilha de Ouro","Ilha Psíquica",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Ilha de Água",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Psíquica",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Água"],
+    "elementos": [
+      "Planta",
+      "Água"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0a/Oaktopus_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162729",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/61/OaktopusIdle.gif/revision/latest?cb=20240913204835"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/61/OaktopusIdle.gif/revision/latest?cb=20240913204835",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 12,
     "nome": "Sabugo Peludo",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio","Ilha de Terra","Ilha de Açúcar-Bush",
-      "Coliseu da Canção","Ilha de Ouro","Ilha de Luz",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Ilha de Terra",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha de Luz",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Frio"],
+    "elementos": [
+      "Planta",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/62/Furcorn_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162807",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/78/FurcornIdle.gif/revision/latest?cb=20241027041007"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/78/FurcornIdle.gif/revision/latest?cb=20241027041007",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 13,
     "nome": "Dom Sapo",
     "ilhas": [
-      "Ilha de Planta","Ilha de Ar","Ilha de Água",
-      "Coliseu da Canção","Ilha de Ouro","Ilha de Osso",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha de Osso",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Terra","Água"],
+    "elementos": [
+      "Terra",
+      "Água"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0b/Fwog_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162857",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/FwogIdle.gif/revision/latest?cb=20240916024817"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/FwogIdle.gif/revision/latest?cb=20240916024817",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 14,
     "nome": "Baqueteador",
     "ilhas": [
-      "Ilha de Planta","Ilha de Ar","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Ilha das Fadas",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Ar",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha das Fadas",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Terra","Frio"],
+    "elementos": [
+      "Terra",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4f/Drumpler_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162941",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f9/DrumplerIdle.gif/revision/latest?cb=20240916024847"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f9/DrumplerIdle.gif/revision/latest?cb=20240916024847",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 15,
     "nome": "Bocarra",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio","Ilha de Ar",
-      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Oásis de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Água","Frio"],
+    "elementos": [
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/25/Maw_Portrait.png/revision/latest/scale-to-width-down/60?cb=20230601092644",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/78/MawIdle.gif/revision/latest?cb=20240907170127"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/78/MawIdle.gif/revision/latest?cb=20240907170127",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 16,
     "nome": "Piu-Flau",
     "ilhas": [
-      "Ilha de Água","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Água",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Refúgio de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Terra"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Terra"
+    ],
     "versao": "1.0.3",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/68/Reedling_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162130",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/34/ReedlingIdle.gif/revision/latest?cb=20240918002338"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/34/ReedlingIdle.gif/revision/latest?cb=20240918002338",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 17,
     "nome": "Esponjo",
     "ilhas": [
-      "Ilha de Frio","Ilha de Água",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Água",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Água"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Água"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/26/Spunge_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162222",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/3a/SpungeIdle.gif/revision/latest?cb=20240918002241"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/3a/SpungeIdle.gif/revision/latest?cb=20240918002241",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 18,
     "nome": "Thumpies",
     "ilhas": [
-      "Ilha de Frio","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Frio"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/15/Thumpies_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162315",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/1f/ThumpiesIdle.gif/revision/latest?cb=20240918135417"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/1f/ThumpiesIdle.gif/revision/latest?cb=20240918135417",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 19,
     "nome": "Pata-Peixe",
     "ilhas": [
-      "Ilha de Ar","Ilha de Água",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Ar",
+      "Ilha de Água",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Terra","Água"],
+    "elementos": [
+      "Ar",
+      "Terra",
+      "Água"
+    ],
     "versao": "1.0.2",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/Scups_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162404",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c2/ScupsIdle.gif/revision/latest?cb=20240918002220"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c2/ScupsIdle.gif/revision/latest?cb=20240918002220",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 20,
     "nome": "PomPom",
     "ilhas": [
-      "Ilha de Ar","Ilha de Terra","Ilha de Açúcar-Bush",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Ar",
+      "Ilha de Terra",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Terra","Frio"],
+    "elementos": [
+      "Ar",
+      "Terra",
+      "Frio"
+    ],
     "versao": "1.0.2",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/2b/PomPom_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162435",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/08/PomPomIdle.gif/revision/latest?cb=20240918032501"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/08/PomPomIdle.gif/revision/latest?cb=20240918032501",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 21,
     "nome": "Tambor-Tronco",
     "ilhas": [
-      "Ilha de Frio","Ilha de Ar",
-      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Ar",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Oásis de Fogo",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Água","Frio"],
+    "elementos": [
+      "Ar",
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e1/Congle_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162508",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c9/CongleIdle.gif/revision/latest?cb=20240918032547"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c9/CongleIdle.gif/revision/latest?cb=20240918032547",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 22,
     "nome": "Maraca",
     "ilhas": [
-      "Ilha de Planta","Ilha de Água",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Água",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Terra","Água"],
+    "elementos": [
+      "Planta",
+      "Terra",
+      "Água"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b9/Pummel_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162617",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c5/PummelIdle.gif/revision/latest?cb=20240917104451"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c5/PummelIdle.gif/revision/latest?cb=20240917104451",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 23,
     "nome": "Rei-do-Vinhedo",
     "ilhas": [
-      "Ilha de Planta","Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Terra",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Terra","Frio"],
+    "elementos": [
+      "Planta",
+      "Terra",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/Clamble_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162655",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/8/8f/ClambleIdle.gif/revision/latest?cb=20241116035004"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/8/8f/ClambleIdle.gif/revision/latest?cb=20241116035004",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 24,
     "nome": "Cornocelo",
     "ilhas": [
-      "Ilha de Planta","Ilha de Frio",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Frio",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Água","Frio"],
+    "elementos": [
+      "Planta",
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e3/Bowgart_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162751",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/09/BowgartIdle.gif/revision/latest?cb=20240913204808"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/09/BowgartIdle.gif/revision/latest?cb=20240913204808",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 25,
     "nome": "T-Rox",
     "ilhas": [
-      "Ilha de Planta","Ilha de Ar",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Planta",
+      "Ilha de Ar",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Terra","Água","Frio"],
+    "elementos": [
+      "Terra",
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/ca/T-Rox_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162918",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a5/T-RoxIdle.gif/revision/latest?cb=20240917104253"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a5/T-RoxIdle.gif/revision/latest?cb=20240917104253",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 26,
     "nome": "Bate-Carapaça",
     "ilhas": [
       "Ilha de Água",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Terra","Água"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Terra",
+      "Água"
+    ],
     "versao": "1.0.3",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/3d/Shellbeat_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162151",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/bc/ShellbeatIdle.gif/revision/latest?cb=20240914025342"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/bc/ShellbeatIdle.gif/revision/latest?cb=20240914025342",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 27,
     "nome": "Banda-de-Rocha",
     "ilhas": [
       "Ilha de Terra",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Terra","Frio"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Terra",
+      "Frio"
+    ],
     "versao": "1.1.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4f/Quarrister_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162208",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c9/QuarristerIdle.gif/revision/latest?cb=20240914025507"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c9/QuarristerIdle.gif/revision/latest?cb=20240914025507",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 28,
     "nome": "Di-Jay",
     "ilhas": [
-      "Ilha de Frio","Ilha de Açúcar-Bush",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Ilha de Frio",
+      "Ilha de Açúcar-Bush",
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Água","Frio"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/9/9f/Deedge_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162252",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/DeedgeIdle.gif/revision/latest?cb=20240913202619"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/DeedgeIdle.gif/revision/latest?cb=20240913202619",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 29,
     "nome": "Riff",
     "ilhas": [
       "Ilha de Ar",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Terra","Água","Frio"],
+    "elementos": [
+      "Ar",
+      "Terra",
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.2",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/2e/Riff_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162418",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/41/RiffIdle.gif/revision/latest?cb=20240914025258"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/41/RiffIdle.gif/revision/latest?cb=20240914025258",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 30,
     "nome": "Molequ-Ent",
     "ilhas": [
       "Ilha de Planta",
-      "Coliseu da Canção","Ilha de Ouro",
-      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
+      "Coliseu da Canção",
+      "Ilha de Ouro",
+      "Ilha Tribal",
+      "Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": ["Planta","Terra","Água","Frio"],
+    "elementos": [
+      "Planta",
+      "Terra",
+      "Água",
+      "Frio"
+    ],
     "versao": "1.0.0",
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/64/Entbrat_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162639",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/02/EntbratIdle.gif/revision/latest?cb=20241030032212"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/02/EntbratIdle.gif/revision/latest?cb=20241030032212",
+    "ovo": null,
+    "combinacao": null
   },
   {
     "id": 31,
@@ -458,10 +789,18 @@
       "Oásis de Fogo"
     ],
     "classe": "Natural",
-    "elementos": ["Ar","Planta","Terra","Água","Frio"],
+    "elementos": [
+      "Ar",
+      "Planta",
+      "Terra",
+      "Água",
+      "Frio"
+    ],
     "versao": "4.3.0",
     "ano": 2024,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/9/97/Mimic_Portrait.png/revision/latest/scale-to-width-down/60?cb=20250112045703",
-    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a4/MimicIdle.gif/revision/latest?cb=20240918135929"
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a4/MimicIdle.gif/revision/latest?cb=20240918135929",
+    "ovo": null,
+    "combinacao": null
   }
-]   
+]

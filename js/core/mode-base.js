@@ -4,9 +4,13 @@ import { getState, saveState, registerWin, getStats } from './storage.js';
 import { infobox } from '../ui/infobox.js';
 import { SITE_TZ } from '../config.js';
 
-export function startMode(modeId, salt, pool = () => true) {
+// Se o filtro do modo deixar poucos monstros, usa todos (evita a mesma resposta todo dia)
+const MIN_POOL = 5;
+
+// minPool: quantos monstros o filtro precisa deixar; abaixo disso usa todos (use 1 para nunca usar todos)
+export function startMode(modeId, salt, pool = () => true, minPool = MIN_POOL) {
   let candidates = MONSTERS.filter(pool);
-  if (!candidates.length) candidates = MONSTERS;
+  if (candidates.length < Math.min(minPool, MONSTERS.length)) candidates = MONSTERS;
 
   const answer = pickDaily(candidates, salt);
   const yesterday = answerFor(candidates, salt, yesterdayKey());
@@ -112,15 +116,21 @@ export function monsterImg(m, cls = '') {
   return img;
 }
 
-// Imagem do modo "invertido": carrega como blob para o src e o alt não entregarem o nome
-export function mysteryImg(m, cls = '') {
+// Imagem do "Ovo invertido": carrega como blob para o src e o alt não entregarem o nome.
+// Se o link for de outro site e o navegador bloquear o fetch (CORS), usa o link direto como plano B.
+export function mysteryImg(url, cls = '') {
   const img = document.createElement('img');
-  img.alt = 'Monstro misterioso';
+  img.alt = 'Ovo misterioso';
   img.className = cls;
   img.draggable = false;
-  fetch(m.image)
-    .then((r) => r.blob())
+  if (!url) return img;
+  fetch(url)
+    .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.blob(); })
     .then((b) => { img.src = URL.createObjectURL(b); })
-    .catch(() => { img.style.visibility = 'hidden'; });
+    .catch(() => {
+      img.referrerPolicy = 'no-referrer';
+      img.onerror = () => { img.style.visibility = 'hidden'; };
+      img.src = url;
+    });
   return img;
 }

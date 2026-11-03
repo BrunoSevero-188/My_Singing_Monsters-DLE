@@ -35,6 +35,10 @@ async function init() {
     return fail('Falha ao carregar os módulos', e);
   }
 
+  // Botão "?" (Dica de Jogo): fica disponível mesmo se os dados falharem
+  try { (await import('./ui/help.js')).mountHelp(document.getElementById('help-slot')); }
+  catch (e) { console.warn('help.js indisponível:', e); }
+
   let ready = false;
 
   function show(id) {

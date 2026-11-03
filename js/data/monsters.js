@@ -6,47 +6,53 @@ export let MONSTERS = [];
 export const slug = (s) =>
   s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-// JSON em português -> formato interno usado pelo jogo. Ícone e GIF são fontes independentes.
+const text = (v) => (v == null || String(v).trim() === '' ? null : String(v).trim());
+
+// "2012" -> 2012 · "2012-09-04" -> 2012 · vazio/inválido -> null
+function toYear(v) {
+  if (v == null || v === '') return null;
+  const n = Number(String(v).slice(0, 4));
+  return Number.isInteger(n) ? n : null;
+}
+
+// "v1.2.0" -> "1.2.0" · vazio -> null
+function toVersion(v) {
+  const t = text(v);
+  return t ? t.replace(/^v/i, '') : null;
+}
+
+// Combinação:
+//   [["Noggin", "Mammott"], ["Tweedle", "Potbelly"]]  -> lista de pares (nomes ou IDs)
+//   [] ou "Comprado"                                    -> 'buy' (só se obtém comprando)
+//   ausente / null                                      -> null (ainda não cadastrada)
+function toCombo(v) {
+  if (v == null) return null;
+  if (typeof v === 'string') return /^comprad/i.test(v.trim()) ? 'buy' : null;
+  if (!Array.isArray(v)) return null;
+  if (!v.length) return 'buy';
+  if (v.length === 1 && typeof v[0] === 'string' && /^comprad/i.test(v[0])) return 'buy';
+  const pairs = v.filter((p) => Array.isArray(p) && p.length === 2);
+  return pairs.length ? pairs : null;
+}
+
+// JSON em português -> formato interno usado pelo jogo
 function normalize(raw) {
-  const icon = raw.icone || raw.imagem || `assets/monsters/${slug(raw.nome)}.png`;
+  const icon = text(raw.icone) ?? text(raw.imagem);
   return {
     id: raw.id,
     name: raw.nome,
     islands: raw.ilhas ?? [],
     type: raw.classe,
     elements: raw.elementos ?? [],
-    releaseDate: raw.lancamento ?? null,
-    icon,
-    gif: raw.gif || null,
-    image: icon,
-    combinacao: Array.isArray(raw.combinacao) ? raw.combinacao : [],
+    version: toVersion(raw.versao),                          // versão do jogo em que foi lançado (ex.: "1.0.0")
+    year: toYear(raw.ano ?? raw.data ?? raw.lancamento),     // ano de lançamento (aceita os campos antigos)
+    icon,                                                    // URL do ícone: célula "Monstro" da tabela
+    gif: text(raw.gif),                                      // URL do gif: aparece quando o jogador acerta
+    egg: text(raw.ovo),                                      // URL do ovo: modo "Ovo invertido"
+    combo: toCombo(raw.combinacao),                          // como obter o monstro (dica 2 do Monstro do dia)
+    image: icon,                                             // alias usado pelos outros modos
     wiki: `${WIKI_BASE}/wiki/${encodeURIComponent(raw.nome.replace(/ /g, '_'))}`,
   };
-}
-
-const elementKey = (monster) => [...new Set(monster.elements)].sort().join('|');
-
-// Sugere combinações cujos elementos dos pais formam exatamente os do monstro.
-// A lista é limitada a duas receitas para manter a dica simples.
-function findCombinations(monster, monsters) {
-  if (monster.combinacao.length) return monster.combinacao.slice(0, 2);
-  const target = new Set(monster.elements);
-  const matches = [];
-  for (let i = 0; i < monsters.length; i++) {
-    const first = monsters[i];
-    if (first.id === monster.id || first.elements.length >= target.size) continue;
-    for (let j = i + 1; j < monsters.length; j++) {
-      const second = monsters[j];
-      if (second.id === monster.id || second.elements.length >= target.size) continue;
-      const combined = new Set([...first.elements, ...second.elements]);
-      if (combined.size === target.size && [...target].every((element) => combined.has(element))) {
-        matches.push(`${first.name} + ${second.name}`);
-      }
-    }
-  }
-  // Monstros de um elemento podem ser reproduzidos usando dois da mesma espécie.
-  if (!matches.length && target.size === 1) matches.push(`${monster.name} + ${monster.name}`);
-  return matches.slice(0, 2);
 }
 
 export async function loadMonsters() {
@@ -57,11 +63,6 @@ export async function loadMonsters() {
     throw new Error(`${DATA_URL} está vazio ou fora do formato (esperado: uma lista de monstros).`);
   }
   MONSTERS = raw.map(normalize);
-  MONSTERS.forEach((monster) => {
-    monster.combinacao = findCombinations(monster, MONSTERS);
-    // Mantém a forma singular usada no JSON e disponibiliza a lista para o jogo.
-    monster.combination = monster.combinacao;
-  });
 }
 
 const uniq = (arr) => [...new Set(arr)].sort();

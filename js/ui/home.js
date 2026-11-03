@@ -6,7 +6,7 @@ import { renderHero } from './hero.js';
 import { renderStats } from './stats.js';
 import { renderSettings } from './settings.js';
 
-const ICONS = { classic: '🎯', inverted: '🌗', island: '🏝️', type: '🎼' };
+const ICONS = { classic: '🎯', egg: '🥚', island: '🏝️', type: '🎼' };
 
 export function renderHome(root, onOpen) {
   root.innerHTML = `
@@ -40,7 +40,8 @@ export function renderHome(root, onOpen) {
     tiles.append(tile);
 
     const pool = MONSTERS.filter(mode.pool ?? (() => true));
-    const m = answerFor(pool.length ? pool : MONSTERS, mode.id, yesterdayKey());
+    const minPool = Math.min(mode.minPool ?? 5, MONSTERS.length);
+    const m = answerFor(pool.length < minPool ? MONSTERS : pool, mode.id, yesterdayKey());
     if (m) {
       const li = document.createElement('li');
       const a = document.createElement('a');

@@ -1,5 +1,5 @@
 import classic from './classic.js';
-import inverted from './inverted.js';
+import egg from './egg.js';
 import { createChoiceMode } from './choice.js';
 import { getIslands, getTypes } from '../data/monsters.js';
 import { CLUE_DEFS } from '../core/clue-defs.js';
@@ -30,4 +30,4 @@ const type = createChoiceMode({
 });
 
 // Para adicionar um modo novo: crie o arquivo em js/modes/ e coloque na lista abaixo
-export const MODES = [classic, inverted, island, type];
+export const MODES = [classic, egg, island, type];
