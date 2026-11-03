@@ -97,7 +97,7 @@ export default {
         b.textContent = c.label;
         b.onclick = () => {
           const next = off ? ctx.state.hidden.filter((k) => k !== c.key) : [...ctx.state.hidden, c.key];
-          if (COLUMNS.length - next.length < 1) return; // mantém ao menos 1 coluna
+          if (COLUMNS.length - next.length < 1) return;
           ctx.state.hidden = next;
           buildHead();
           renderChallenger();
@@ -117,16 +117,19 @@ export default {
     const addRow = (m, animate = true) => {
       const tr = document.createElement('tr');
 
-      // 1ª coluna: nome (verde = certo, vermelho = errado)
+      // O ícone vem do campo próprio e revela o nome ao passar o mouse.
       const nameTd = document.createElement('td');
       nameTd.className = compare(m, ctx.answer, 'name') + (animate ? ' flip' : '');
       const cell = document.createElement('div');
       cell.className = 'name-cell';
+      const icon = monsterImg(m, 'thumb');
+      icon.title = m.name;
+      icon.setAttribute('aria-label', m.name);
       const link = document.createElement(m.wiki ? 'a' : 'span');
       link.className = 'name-link';
       link.textContent = m.name;
       if (m.wiki) { link.href = m.wiki; link.target = '_blank'; link.rel = 'noopener'; }
-      cell.append(monsterImg(m, 'thumb'), link);
+      cell.append(icon, link);
       nameTd.append(cell);
       tr.append(nameTd);
 
@@ -142,7 +145,6 @@ export default {
       rows.prepend(tr);
     };
 
-    // Grade de emojis para compartilhar (últimos 10 palpites)
     const buildGrid = () => {
       const ids = ctx.state.guesses;
       const lines = ids.slice(-10).map((id) => {

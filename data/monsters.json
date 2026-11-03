@@ -283,8 +283,8 @@
     "elementos": ["Ar","Terra","Água"],
     "versao": "1.0.2",
     "ano": 2012,
-    "icone": "assets/monsters/scups.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/67/Scups_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162404",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c2/ScupsIdle.gif/revision/latest?cb=20240918002220"
   },
   {
     "id": 20,

@@ -8,10 +8,13 @@ const elements = {
 
 export const CLUE_DEFS = {
   classic: [
-    { id: 'letter', label: 'Nome', after: 6,
-      reveal: (m) => `Começa com "${m.name[0]}" e tem ${m.name.length} caracteres.` },
-    { id: 'counts', label: 'Números', after: 9,
-      reveal: (m) => `Tem ${m.elements.length} elemento(s) e vive em ${m.islands.length} ilha(s).` },
+    { id: 'element-count', label: 'Quantidade de elementos', after: 3,
+      reveal: (m) => `Este monstro possui ${m.elements.length} elemento(s).` },
+    { id: 'combination', label: 'Combinação', after: 6,
+      reveal: (m) => {
+        const combinations = m.combinacao ?? m.combination ?? [];
+        return combinations.length ? combinations.map((combination) => `[${combination}]`).join(' · ') : '[Comprado]';
+      } },
   ],
   inverted: [
     { id: 'elements', label: 'Elementos', after: 5, reveal: (m) => m.elements.join(', ') },

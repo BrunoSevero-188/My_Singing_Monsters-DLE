@@ -14,12 +14,30 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#home">MSM<span>dle</span></a>
+    <a class="brand" href="#home"><img class="brand-logo" src="https://static.wikia.nocookie.net/mysingingmonsters/images/d/d9/MSM_Logo.png/revision/latest/scale-to-width-down/250?cb=20241114050213" alt="My Singing Monsters" /><span class="brand-name">MSM<span>dle</span></span></a>
     <nav id="nav" aria-label="Modos de jogo"></nav>
   </header>
+
+  <button class="game-help-trigger" type="button" aria-label="Abrir Dica de Jogo" aria-haspopup="dialog" onclick="document.getElementById('game-help-dialog').showModal()">?</button>
+  <dialog class="game-help-dialog" id="game-help-dialog" aria-labelledby="game-help-title">
+    <h2 class="box-title" id="game-help-title">Dica de Jogo</h2>
+    <section>
+      <h3>🎯 Monstro do dia — modo clássico</h3>
+      <p>Digite ou escolha um monstro na busca. Cada palpite mostra como ele se compara ao monstro secreto:</p>
+      <ul>
+        <li><strong>Verde:</strong> a informação está correta.</li>
+        <li><strong>Laranja:</strong> há elementos ou ilhas em comum.</li>
+        <li><strong>Vermelho:</strong> a informação está diferente.</li>
+        <li>As setas indicam se o monstro secreto foi lançado antes ou depois.</li>
+      </ul>
+      <p>Use as dicas liberadas após suas tentativas para descobrir o monstro do dia.</p>
+    </section>
+    <form method="dialog"><button class="pill">Fechar</button></form>
+  </dialog>
 
   <main id="game"></main>
 

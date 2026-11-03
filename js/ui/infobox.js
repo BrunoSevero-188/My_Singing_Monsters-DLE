@@ -33,10 +33,14 @@ export function infobox(m) {
   head.dataset.k = key([].concat(m.type)[0]);
 
   const img = document.createElement('img');
-  img.src = m.image;
+  img.src = m.gif || m.icon || m.image;
   img.alt = m.name;
+  img.title = m.name;
   img.className = 'infobox-img';
-  img.onerror = () => { img.style.visibility = 'hidden'; };
+  img.onerror = () => {
+    if (img.src !== m.icon && (m.icon || m.image)) img.src = m.icon || m.image;
+    else img.style.visibility = 'hidden';
+  };
 
   box.append(
     head, img,
