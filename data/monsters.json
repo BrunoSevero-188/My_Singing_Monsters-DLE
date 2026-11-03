@@ -208,8 +208,8 @@
     "elementos": ["Terra","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/drumpler.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4f/Drumpler_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162941",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f9/DrumplerIdle.gif/revision/latest?cb=20240916024847"
   },
   {
     "id": 15,
@@ -223,8 +223,8 @@
     "elementos": ["Água","Frio"],
     "versao": "1.0.0",
     "ano": 2012,
-    "icone": "assets/monsters/maw.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/25/Maw_Portrait.png/revision/latest/scale-to-width-down/60?cb=20230601092644",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/78/MawIdle.gif/revision/latest?cb=20240907170127"
   },
   {
     "id": 16,
@@ -298,8 +298,8 @@
     "elementos": ["Ar","Terra","Frio"],
     "versao": "1.0.2",
     "ano": 2012,
-    "icone": "assets/monsters/pompom.png",
-    "gif": null
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/2b/PomPom_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162435",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/08/PomPomIdle.gif/revision/latest?cb=20240918032501"
   },
   {
     "id": 21,
