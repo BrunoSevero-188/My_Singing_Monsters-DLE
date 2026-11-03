@@ -1,0 +1,12 @@
+Coloque aqui as imagens dos monstros (PNG, de preferência com fundo transparente).
+
+O nome do arquivo é o nome do monstro em minúsculas, sem acentos, com espaços e
+símbolos trocados por "-". Exemplos:
+
+  Noggin      ->  noggin.png
+  Toe Jammer  ->  toe-jammer.png
+  T-Rox       ->  t-rox.png
+  PomPom      ->  pompom.png
+
+Para usar outro caminho em um monstro específico, adicione o campo "imagem" no JSON:
+  { "id": 1, "nome": "Noggin", ..., "imagem": "assets/monsters/outro-nome.png" }

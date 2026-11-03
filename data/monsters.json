@@ -1,651 +1,467 @@
 [
   {
     "id": 1,
-    "nome": "Tweedle",
+    "nome": "Pintinho Piu",
     "ilhas": [
-      "Cold Island",
-      "Air Island",
-      "Water Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Fire Oasis",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Ar","Ilha de Água","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo","Oásis de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air"
-    ],
-    "lancamento": null
+    "elementos": ["Ar"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/tweedle.png",
+    "gif": null
   },
   {
     "id": 2,
-    "nome": "Potbelly",
+    "nome": "Planta Pança",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "Water Island",
-      "Earth Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Light Island",
-      "Psychic Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio","Ilha de Água","Ilha de Terra",
+      "Ilha de Açúcar-Bush","Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
+      "Ilha de Luz","Ilha Psíquica","Ilha Tribal","Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant"
-    ],
-    "lancamento": null
+    "elementos": ["Planta"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/potbelly.png",
+    "gif": null
   },
   {
     "id": 3,
-    "nome": "Noggin",
+    "nome": "Cabeça-Dura",
     "ilhas": [
-      "Plant Island",
-      "Air Island",
-      "Water Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Faerie Island",
-      "Bone Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Ar","Ilha de Água","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo","Ilha das Fadas",
+      "Ilha de Osso","Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Earth"
-    ],
-    "lancamento": null
+    "elementos": ["Terra"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/noggin.png",
+    "gif": null
   },
   {
     "id": 4,
-    "nome": "Toe Jammer",
+    "nome": "Dedo-Enroscado",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "Air Island",
-      "Water Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Oasis",
-      "Psychic Island",
-      "Bone Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio","Ilha de Ar","Ilha de Água",
+      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo","Ilha Psíquica",
+      "Ilha de Osso","Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Água"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/toe-jammer.png",
+    "gif": null
   },
   {
     "id": 5,
-    "nome": "Mammott",
+    "nome": "Mamutinho",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "Air Island",
-      "Earth Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Oasis",
-      "Light Island",
-      "Faerie Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio","Ilha de Ar","Ilha de Terra",
+      "Ilha de Açúcar-Bush","Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
+      "Ilha de Luz","Ilha das Fadas","Ilha Tribal","Ilha dos Compositores",
+      "Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/mammott.png",
+    "gif": null
   },
   {
     "id": 6,
-    "nome": "Dandidoo",
+    "nome": "Dandidão",
     "ilhas": [
-      "Cold Island",
-      "Water Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Água","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/dandidoo.png",
+    "gif": null
   },
   {
     "id": 7,
-    "nome": "Cybop",
+    "nome": "Cibop",
     "ilhas": [
-      "Air Island",
-      "Water Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Ar","Ilha de Água","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Earth"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Terra"],
+    "versao": "1.0.2",
+    "ano": 2012,
+    "icone": "assets/monsters/cybop.png",
+    "gif": null
   },
   {
     "id": 8,
-    "nome": "Quibble",
+    "nome": "Picuinha",
     "ilhas": [
-      "Cold Island",
-      "Air Island",
-      "Water Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Oasis",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Ar","Ilha de Água","Ilha de Açúcar-Bush",
+      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Água"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/quibble.png",
+    "gif": null
   },
   {
     "id": 9,
-    "nome": "Pango",
+    "nome": "Panguim",
     "ilhas": [
-      "Cold Island",
-      "Air Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Oasis",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Ar","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/pango.png",
+    "gif": null
   },
   {
     "id": 10,
-    "nome": "Shrubb",
+    "nome": "Arbusto",
     "ilhas": [
-      "Plant Island",
-      "Water Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Água","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Earth"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Terra"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/shrubb.png",
+    "gif": null
   },
   {
     "id": 11,
-    "nome": "Oaktopus",
+    "nome": "Carvalho-Polvo",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "Water Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Psychic Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio","Ilha de Água","Ilha de Açúcar-Bush",
+      "Coliseu da Canção","Ilha de Ouro","Ilha Psíquica",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Água"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/oaktopus.png",
+    "gif": null
   },
   {
     "id": 12,
-    "nome": "Furcorn",
+    "nome": "Sabugo Peludo",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "Earth Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Light Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio","Ilha de Terra","Ilha de Açúcar-Bush",
+      "Coliseu da Canção","Ilha de Ouro","Ilha de Luz",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/furcorn.png",
+    "gif": null
   },
   {
     "id": 13,
-    "nome": "Fwog",
+    "nome": "Dom Sapo",
     "ilhas": [
-      "Plant Island",
-      "Air Island",
-      "Water Island",
-      "The Colossingum",
-      "Gold Island",
-      "Bone Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Ar","Ilha de Água",
+      "Coliseu da Canção","Ilha de Ouro","Ilha de Osso",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Earth",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Terra","Água"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/fwog.png",
+    "gif": null
   },
   {
     "id": 14,
-    "nome": "Drumpler",
+    "nome": "Baqueteador",
     "ilhas": [
-      "Plant Island",
-      "Air Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Faerie Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Ar","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Ilha das Fadas",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Earth",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Terra","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/drumpler.png",
+    "gif": null
   },
   {
     "id": 15,
-    "nome": "Maw",
+    "nome": "Bocarra",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "Air Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Oasis",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio","Ilha de Ar",
+      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Água","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/maw.png",
+    "gif": null
   },
   {
     "id": 16,
-    "nome": "Reedling",
+    "nome": "Piu-Flau",
     "ilhas": [
-      "Water Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Haven",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Água","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro","Refúgio de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Earth"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Terra"],
+    "versao": "1.0.3",
+    "ano": 2012,
+    "icone": "assets/monsters/reedling.png",
+    "gif": null
   },
   {
     "id": 17,
-    "nome": "Spunge",
+    "nome": "Esponjo",
     "ilhas": [
-      "Cold Island",
-      "Water Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Água",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Água"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/spunge.png",
+    "gif": null
   },
   {
     "id": 18,
     "nome": "Thumpies",
     "ilhas": [
-      "Cold Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/thumpies.png",
+    "gif": null
   },
   {
     "id": 19,
-    "nome": "Scups",
+    "nome": "Pata-Peixe",
     "ilhas": [
-      "Air Island",
-      "Water Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Ar","Ilha de Água",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Earth",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Terra","Água"],
+    "versao": "1.0.2",
+    "ano": 2012,
+    "icone": "assets/monsters/scups.png",
+    "gif": null
   },
   {
     "id": 20,
     "nome": "PomPom",
     "ilhas": [
-      "Air Island",
-      "Earth Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Ar","Ilha de Terra","Ilha de Açúcar-Bush",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Earth",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Terra","Frio"],
+    "versao": "1.0.2",
+    "ano": 2012,
+    "icone": "assets/monsters/pompom.png",
+    "gif": null
   },
   {
     "id": 21,
-    "nome": "Congle",
+    "nome": "Tambor-Tronco",
     "ilhas": [
-      "Cold Island",
-      "Air Island",
-      "The Colossingum",
-      "Gold Island",
-      "Fire Oasis",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Ar",
+      "Coliseu da Canção","Ilha de Ouro","Oásis de Fogo",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Água","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/congle.png",
+    "gif": null
   },
   {
     "id": 22,
-    "nome": "Pummel",
+    "nome": "Maraca",
     "ilhas": [
-      "Plant Island",
-      "Water Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Água",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Earth",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Terra","Água"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/pummel.png",
+    "gif": null
   },
   {
     "id": 23,
-    "nome": "Clamble",
+    "nome": "Rei-do-Vinhedo",
     "ilhas": [
-      "Plant Island",
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Earth",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Terra","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/clamble.png",
+    "gif": null
   },
   {
     "id": 24,
-    "nome": "Bowgart",
+    "nome": "Cornocelo",
     "ilhas": [
-      "Plant Island",
-      "Cold Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Frio",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Água","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/bowgart.png",
+    "gif": null
   },
   {
     "id": 25,
     "nome": "T-Rox",
     "ilhas": [
-      "Plant Island",
-      "Air Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta","Ilha de Ar",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Earth",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Terra","Água","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/t-rox.png",
+    "gif": null
   },
   {
     "id": 26,
-    "nome": "Shellbeat",
+    "nome": "Bate-Carapaça",
     "ilhas": [
-      "Water Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Água",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Earth",
-      "Water"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Terra","Água"],
+    "versao": "1.0.3",
+    "ano": 2012,
+    "icone": "assets/monsters/shellbeat.png",
+    "gif": null
   },
   {
     "id": 27,
-    "nome": "Quarrister",
+    "nome": "Banda-de-Rocha",
     "ilhas": [
-      "Earth Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Terra",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Earth",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Terra","Frio"],
+    "versao": "1.1.0",
+    "ano": 2012,
+    "icone": "assets/monsters/quarrister.png",
+    "gif": null
   },
   {
     "id": 28,
-    "nome": "Deedge",
+    "nome": "Di-Jay",
     "ilhas": [
-      "Cold Island",
-      "Shugabush Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Frio","Ilha de Açúcar-Bush",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Água","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/deedge.png",
+    "gif": null
   },
   {
     "id": 29,
     "nome": "Riff",
     "ilhas": [
-      "Air Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Ar",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Earth",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Terra","Água","Frio"],
+    "versao": "1.0.2",
+    "ano": 2012,
+    "icone": "assets/monsters/riff.png",
+    "gif": null
   },
   {
     "id": 30,
-    "nome": "Entbrat",
+    "nome": "Molequ-Ent",
     "ilhas": [
-      "Plant Island",
-      "The Colossingum",
-      "Gold Island",
-      "Tribal Island",
-      "Composer Island",
-      "Mirror Map"
+      "Ilha de Planta",
+      "Coliseu da Canção","Ilha de Ouro",
+      "Ilha Tribal","Ilha dos Compositores","Mapa Espelhado"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Plant",
-      "Earth",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Planta","Terra","Água","Frio"],
+    "versao": "1.0.0",
+    "ano": 2012,
+    "icone": "assets/monsters/entbrat.png",
+    "gif": null
   },
   {
     "id": 31,
-    "nome": "Mimic",
+    "nome": "Mímico",
     "ilhas": [
-      "Fire Oasis"
+      "Oásis de Fogo"
     ],
     "classe": "Natural",
-    "elementos": [
-      "Air",
-      "Plant",
-      "Earth",
-      "Water",
-      "Cold"
-    ],
-    "lancamento": null
+    "elementos": ["Ar","Planta","Terra","Água","Frio"],
+    "versao": "4.3.0",
+    "ano": 2024,
+    "icone": "assets/monsters/mimic.png",
+    "gif": null
   }
-]
+]   

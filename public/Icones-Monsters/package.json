@@ -1,0 +1,13 @@
+{
+  "name": "msmdle",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "description": "MSMdle: desafios diários de My Singing Monsters, feitos por brasileiros e em português do Brasil.",
+  "scripts": {
+    "dev": "npx serve .",
+    "migrar": "node scripts/migrar-json.mjs",
+    "check": "node scripts/check.mjs",
+    "test": "node --test"
+  }
+}
