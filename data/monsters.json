@@ -23,8 +23,8 @@
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/22/Tweedle_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101161901",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/db/TweedleIdle.gif/revision/latest?cb=20260401163337",
-    "ovo": null,
-    "combinacao": null
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c6/Tweedle-egg.png/revision/latest/scale-to-width-down/60?cb=20240613192846",
+    "combinacao": ["Comprado"]
   },
   {
     "id": 2,
@@ -52,8 +52,8 @@
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/7d/Potbelly_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162540",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/PotbellyIdle.gif/revision/latest?cb=20260401163356",
-    "ovo": null,
-    "combinacao": null
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f1/Potbelly-egg.png/revision/latest/scale-to-width-down/60?cb=20191023212145",
+    "combinacao": ["Comprado"]
   },
   {
     "id": 3,
@@ -80,8 +80,8 @@
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/02/Noggin_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162823",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e2/NogginIdle.gif/revision/latest?cb=20260401163408",
-    "ovo": null,
-    "combinacao": null
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/c4/Noggin-egg.png/revision/latest/scale-to-width-down/60?cb=20191023211147",
+    "combinacao": ["Comprado"]
   },
   {
     "id": 4,
@@ -108,8 +108,8 @@
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/0/0a/Toe_Jammer_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101163010",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e8/ToeJammerIdle.gif/revision/latest?cb=20260401163416",
-    "ovo": null,
-    "combinacao": null
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/Toe_Jammer-egg.png/revision/latest/scale-to-width-down/60?cb=20191023212136",
+    "combinacao": ["Comprado"]
   },
   {
     "id": 5,
@@ -137,8 +137,8 @@
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/25/Mammott_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101163053",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d4/MammottIdle.gif/revision/latest?cb=20260401163427",
-    "ovo": null,
-    "combinacao": null
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/2/2c/Mammott-egg.png/revision/latest/scale-to-width-down/60?cb=20191023212126",
+    "combinacao": ["Comprado"]
   },
   {
     "id": 6,
@@ -164,7 +164,7 @@
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/4b/Dandidoo_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101161958",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/13/DandidooIdle.gif/revision/latest?cb=20240913204934",
     "ovo": null,
-    "combinacao": null
+    "combinacao": ["Pintinho Piu + Planta Pança"]
   },
   {
     "id": 7,
@@ -242,7 +242,7 @@
     "ano": 2012,
     "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/7/77/Pango_Portrait.png/revision/latest/scale-to-width-down/60?cb=20140101162522",
     "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/d/d7/PangoIdle.gif/revision/latest?cb=20240916024740",
-    "ovo": null,
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/6b/Pango-egg.png/revision/latest/scale-to-width-down/60?cb=20191023212730",
     "combinacao": null
   },
   {
