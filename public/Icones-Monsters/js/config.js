@@ -12,4 +12,4 @@ export const LAUNCH_DATE = '2026-11-02';
 export const BLUR = { start: 8, step: 0.7, min: 2 };
 
 // Base da wiki, usada nos links "Ver na wiki"
-export const WIKI_BASE = 'https://mysingingmonsters.fandom.com';
+export const WIKI_BASE = 'https://mysingingmonsters.fandom.com/pt-br/wiki/My_Singing_Monsters_Wiki';

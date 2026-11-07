@@ -13,7 +13,7 @@ export const LAUNCH_DATE = '2026-11-02';
 export const BLUR = { start: 0, step: 0.7, min: 0 };
 
 // Base da wiki (usada nos links de "Ontem era" e "Respostas de ontem")
-export const WIKI_BASE = 'https://mysingingmonsters.fandom.com';
+export const WIKI_BASE = 'https://mysingingmonsters.fandom.com/pt-br/wiki/My_Singing_Monsters_Wiki';
 
 // "Pesquisar mais": abre esta busca no navegador do usuário com "My Singing Monsters, <nome>"
 export const SEARCH_URL = 'https://www.google.com/search?q=';

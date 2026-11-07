@@ -127,4 +127,4 @@ Lembre de commitar `data/` e `assets/monsters/`.
 
 ## Créditos
 
-Dados e imagens: [My Singing Monsters Wiki](https://mysingingmonsters.fandom.com) (Fandom). Texto sob CC-BY-SA.
+Dados e imagens: [My Singing Monsters Wiki](https://mysingingmonsters.fandom.com/pt-br/wiki/My_Singing_Monsters_Wiki) (Fandom). Texto sob CC-BY-SA.

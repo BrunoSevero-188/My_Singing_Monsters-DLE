@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 
-const WIKI = 'https://mysingingmonsters.fandom.com';
+const WIKI = 'https://mysingingmonsters.fandom.com/pt-br/wiki/My_Singing_Monsters_Wiki';
 const API = `${WIKI}/api.php`;
 
 // ===== AJUSTE AQUI depois de rodar `npm run inspect` =====
