@@ -1343,8 +1343,7 @@
   {
     "id": 78,
     "nome": "Punkleton",
-    "ilhas": ["Ilha de Planta",
-      "Ilha de Planta Espelhada", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal", "Ilha de Planta Espelhada"]
+    "ilhas": ["Ilha de Planta", "Ilha de Planta Espelhada", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal", "Ilha de Planta Espelhada"],
     "elementos": ["Spooktacle"],
     "versao": "1.0.0",
     "ano": 2012,
@@ -1356,8 +1355,7 @@
   {
     "id": 79,
     "nome": "Yool",
-    "ilhas": ["Ilha de Frio",
-      "Ilha de Frio Espelhada", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal", "Ilha de Frio Espelhada"]
+    "ilhas": ["Ilha de Frio", "Ilha de Frio Espelhada", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal", "Ilha de Frio Espelhada"],
     "elementos": ["Festival da Alegria"],
     "versao": "1.0.0",
     "ano": 2012,
