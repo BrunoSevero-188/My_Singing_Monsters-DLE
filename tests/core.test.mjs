@@ -3,8 +3,13 @@ import assert from 'node:assert/strict';
 import { compare, parseVersion, fmtVersion } from '../js/core/compare.js';
 import { answerFor } from '../js/core/daily.js';
 import * as dados from '../js/data/monsters.js';
+import { toRarity, rarityColor, RARITIES } from '../js/core/rarity.js';
 import { comboText, CLUE_DEFS } from '../js/core/clue-defs.js';
 import { searchLink } from '../js/config.js';
+import {
+  aplicarFiltro, filtrarPorElemento, filtrarPorRaridade, listaFiltrada, operadorPadrao, listaDeElementos, operadoresDoCampo,
+  gradientColors, colorOf, dexNumber, numeros, acharMonstro, ELEMENT_COLORS,
+} from '../js/core/library.js';
 
 const m = (over) => ({ id: 1, islands: [], type: 'Natural', elements: [], version: null, year: null, ...over });
 
@@ -111,4 +116,127 @@ test('Pesquisar mais: busca "My Singing Monsters, <nome>" com o nome codificado'
   const url = searchLink('Toe Jammer');
   assert.ok(url.startsWith('https://www.google.com/search?q='));
   assert.equal(decodeURIComponent(url.split('q=')[1]), 'My Singing Monsters, Toe Jammer');
+});
+
+// ---------------- Biblioteca (pokédex) ----------------
+const dex = [
+  { id: 1, name: 'Noggin', rarity: 'comum', type: 'Natural', elements: ['Earth'], islands: ['Plant Island', 'Air Island'], year: 2012, version: '1.0.0' },
+  { id: 2, name: 'Mammott', rarity: 'raro', type: 'Natural', elements: ['Cold'], islands: ['Cold Island'], year: 2013, version: '1.10.0' },
+  { id: 3, name: 'Toe Jammer', rarity: 'epico', type: 'Natural', elements: ['Water', 'Air'], islands: ['Water Island'], year: 2013, version: '1.9.0' },
+  { id: 4, name: 'Árvore', type: 'Mágico', elements: ['Plant'], islands: ['Magical Sanctum'], year: null, version: null },
+];
+const ids = (l) => l.map((m) => m.id);
+
+test('Biblioteca: número no formato #003', () => {
+  assert.equal(dexNumber(3), '003');
+  assert.equal(dexNumber(120), '120');
+});
+
+test('Biblioteca: pesquisa por nome (igual, diferente, contém) ignora acento e maiúsculas', () => {
+  assert.deepEqual(ids(aplicarFiltro(dex, 'nome', 'contem', 'NOG')), [1]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'nome', 'contem', 'arvore')), [4]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'nome', 'igual', 'mammott')), [2]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'nome', 'diferente', 'mammott')), [1, 3, 4]);
+});
+
+test('Biblioteca: pesquisa por Nº com as 6 condições', () => {
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'igual', '2')), [2]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'diferente', '2')), [1, 3, 4]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'maior', '2')), [3, 4]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'menor', '2')), [1]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'maior_igual', '2')), [2, 3, 4]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'menor_igual', '2')), [1, 2]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'id', 'igual', 'abc')), []); // texto no campo numérico
+});
+
+test('Biblioteca: pesquisa por ano e por versão (1.10 vem depois de 1.9); sem dado não aparece', () => {
+  assert.deepEqual(ids(aplicarFiltro(dex, 'ano', 'igual', '2013')), [2, 3]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'ano', 'maior', '2012')), [2, 3]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'ano', 'diferente', '2012')), [2, 3]); // Árvore (sem ano) fica de fora
+  assert.deepEqual(ids(aplicarFiltro(dex, 'versao', 'maior', '1.9')), [2]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'versao', 'menor_igual', '1.9.0')), [1, 3]);
+});
+
+test('Biblioteca: elemento, classe e ilha aceitam o valor do JSON e a tradução', () => {
+  assert.deepEqual(ids(aplicarFiltro(dex, 'elemento', 'igual', 'water')), [3]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'elemento', 'igual', 'água')), [3]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'elemento', 'contem', 'agu')), [3]);       // "Água" (Water)
+  assert.deepEqual(ids(aplicarFiltro(dex, 'elemento', 'contem', 'ar')), [1, 3]);     // "Ar" (Air) e "Earth"
+  assert.deepEqual(ids(aplicarFiltro(dex, 'elemento', 'diferente', 'air')), [1, 2, 4]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'classe', 'igual', 'Mágico')), [4]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'ilha', 'contem', 'plant')), [1]);
+});
+
+test('Biblioteca: texto vazio não filtra; cada campo tem as suas condições', () => {
+  assert.equal(aplicarFiltro(dex, 'nome', 'contem', '   ').length, 4);
+  assert.equal(operadoresDoCampo('id').length, 6);
+  assert.equal(operadoresDoCampo('nome').length, 3);
+  assert.deepEqual(operadoresDoCampo('elemento').map((o) => o.value), ['igual', 'diferente', 'contem']);
+});
+
+test('Biblioteca: botão de elemento + pesquisa juntos, sempre ordenado pelo número', () => {
+  assert.deepEqual(ids(filtrarPorElemento(dex, 'AIR')), [3]);
+  assert.equal(filtrarPorElemento(dex, '').length, 4);
+  assert.deepEqual(ids(listaFiltrada([...dex].reverse(), { elemento: 'Water', campo: 'nome', operador: 'contem', texto: 'toe' })), [3]);
+  assert.deepEqual(ids(listaFiltrada([...dex].reverse())), [1, 2, 3, 4]);
+  assert.deepEqual(listaDeElementos(dex), ['Earth', 'Cold', 'Water', 'Air', 'Plant']);
+});
+
+test('Biblioteca: degradê do cartão vai da cor do 1º ao 2º elemento', () => {
+  assert.deepEqual(gradientColors(dex[2]), [ELEMENT_COLORS.water, ELEMENT_COLORS.air]);
+  assert.deepEqual(gradientColors(dex[0]), [ELEMENT_COLORS.earth, ELEMENT_COLORS.earth]);
+  assert.equal(colorOf('Elemento Novo'), '#6b6591'); // desconhecido tem cor padrão
+});
+
+test('Biblioteca: "Em números" e busca de monstros citados em combinações', () => {
+  const [el, ilhas] = numeros(dex[2], dex);
+  assert.deepEqual([el.valor, el.max], [2, 5]);
+  assert.equal(ilhas.valor, 1);
+  assert.equal(ilhas.max, 5); // 5 ilhas diferentes no JSON de teste
+  assert.equal(acharMonstro('noggin', dex).id, 1);
+  assert.equal(acharMonstro(3, dex).name, 'Toe Jammer');
+  assert.equal(acharMonstro('Inexistente', dex), undefined);
+});
+
+test('raridade: aceita comum, raro e épico (com ou sem acento, maiúsculas, inglês); inválido vira null', () => {
+  assert.deepEqual(RARITIES, ['comum', 'raro', 'epico']);
+  assert.equal(toRarity('Épico'), 'epico');
+  assert.equal(toRarity(' RARO '), 'raro');
+  assert.equal(toRarity('common'), 'comum');
+  assert.equal(toRarity('epic'), 'epico');
+  assert.equal(toRarity('lendário'), null);
+  assert.equal(toRarity(''), null);
+  assert.equal(toRarity(undefined), null);
+  assert.notEqual(rarityColor('epico'), rarityColor('comum'));
+});
+
+test('raridade: o carregador lê o campo "raridade"', async () => {
+  globalThis.fetch = async () => ({
+    ok: true,
+    json: async () => [
+      { id: 1, nome: 'A', ilhas: ['X'], classe: 'Natural', raridade: 'Épico', elementos: ['Air'] },
+      { id: 2, nome: 'B', ilhas: ['X'], classe: 'Natural', raridade: 'raro', elementos: ['Air'] },
+      { id: 3, nome: 'C', ilhas: ['X'], classe: 'Natural', elementos: ['Air'] },
+    ],
+  });
+  await dados.loadMonsters();
+  assert.deepEqual(dados.MONSTERS.map((m) => m.rarity), ['epico', 'raro', null]);
+});
+
+test('Biblioteca: pesquisa por raridade (valor do JSON ou texto exibido) e botões de raridade', () => {
+  assert.deepEqual(ids(aplicarFiltro(dex, 'raridade', 'igual', 'raro')), [2]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'raridade', 'igual', 'Épico')), [3]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'raridade', 'igual', 'epico')), [3]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'raridade', 'contem', 'com')), [1]);
+  assert.deepEqual(ids(aplicarFiltro(dex, 'raridade', 'diferente', 'raro')), [1, 3, 4]); // sem raridade também aparece
+  assert.deepEqual(operadoresDoCampo('raridade').map((o) => o.value), ['igual', 'diferente', 'contem']);
+  assert.deepEqual(ids(filtrarPorRaridade(dex, 'epico')), [3]);
+  assert.equal(filtrarPorRaridade(dex, '').length, 4);
+  assert.deepEqual(ids(listaFiltrada(dex, { raridade: 'comum', elemento: 'Earth' })), [1]);
+  assert.deepEqual(ids(listaFiltrada(dex, { raridade: 'raro', elemento: 'Earth' })), []);
+});
+
+test('Biblioteca: condição inicial é "Contém" nos campos de texto e "Igual" nos numéricos', () => {
+  for (const c of ['nome', 'elemento', 'classe', 'raridade', 'ilha']) assert.equal(operadorPadrao(c), 'contem');
+  for (const c of ['id', 'versao', 'ano']) assert.equal(operadorPadrao(c), 'igual');
 });

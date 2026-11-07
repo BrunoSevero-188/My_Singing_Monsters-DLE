@@ -1,6 +1,7 @@
 import { label } from '../i18n.js';
 import { fmtVersion, fmtYear } from '../core/compare.js';
 import { searchLink } from '../config.js';
+import { rarityColor } from '../core/rarity.js';
 
 const el = (tag, cls, text) => {
   const e = document.createElement(tag);
@@ -45,6 +46,11 @@ export function infobox(m) {
     row('Elementos', ...m.elements.map((v) => chip(v, 'element'))),
     row('Ilhas', ...m.islands.map((v) => chip(v, 'island'))),
   );
+  if (m.rarity) {
+    const r = el('span', 'chip', label('rarity', m.rarity));
+    r.style.backgroundColor = rarityColor(m.rarity);
+    box.append(row('Raridade', r));
+  }
   if (m.version) box.append(row('Versão', document.createTextNode(fmtVersion(m.version))));
   if (m.year != null) box.append(row('Ano', document.createTextNode(fmtYear(m.year))));
 

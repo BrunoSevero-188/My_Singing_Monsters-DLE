@@ -3,11 +3,11 @@
 
 const nameOf = (v, all) => (typeof v === 'number' ? (all.find((x) => x.id === v)?.name ?? `#${v}`) : String(v));
 
-// Até 2 combinações no formato [(Monstro) + (Monstro)]; ou [(Comprado)] se só se obtém comprando
-export function comboText(m, all = []) {
+// Até `max` combinações (padrão 2) no formato [(Monstro) + (Monstro)]; ou [(Comprado)] se só se obtém comprando
+export function comboText(m, all = [], max = 2) {
   if (m.combo === 'buy') return '[(Comprado)]';
   if (!m.combo?.length) return 'A combinação deste monstro ainda não foi cadastrada.';
-  return m.combo.slice(0, 2).map(([a, b]) => `[(${nameOf(a, all)}) + (${nameOf(b, all)})]`).join('\n');
+  return m.combo.slice(0, max).map(([a, b]) => `[(${nameOf(a, all)}) + (${nameOf(b, all)})]`).join('\n');
 }
 
 const elements = {

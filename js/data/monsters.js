@@ -1,4 +1,5 @@
 import { WIKI_BASE } from '../config.js';
+import { toRarity } from '../core/rarity.js';
 
 export const DATA_URL = 'data/monsters.json';
 export let MONSTERS = [];
@@ -43,6 +44,7 @@ function normalize(raw) {
     name: raw.nome,
     islands: raw.ilhas ?? [],
     type: raw.classe,
+    rarity: toRarity(raw.raridade),                          // 'comum' | 'raro' | 'epico' (ou null)
     elements: raw.elementos ?? [],
     version: toVersion(raw.versao),                          // versão do jogo em que foi lançado (ex.: "1.0.0")
     year: toYear(raw.ano ?? raw.data ?? raw.lancamento),     // ano de lançamento (aceita os campos antigos)

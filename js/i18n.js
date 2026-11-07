@@ -4,6 +4,7 @@ const DICT = {
   element: { Air: 'Ar', Plant: 'Planta', Earth: 'Terra', Water: 'Água', Cold: 'Frio' },
   class: { Natural: 'Natural' },
   island: {},
+  rarity: { comum: 'Comum', raro: 'Raro', epico: 'Épico' },
 };
 
 export const label = (kind, value) => DICT[kind]?.[value] ?? value;

@@ -15,6 +15,15 @@ export function renderHome(root, onOpen) {
       <div class="tiles" id="tiles"></div>
     </section>
     <section class="box">
+      <h2 class="box-title">Biblioteca</h2>
+      <a class="tile lib-tile" href="#biblioteca">
+        <span class="tile-icon">📚</span>
+        <strong>Biblioteca de monstros</strong>
+        <small>Veja todos os monstros, como numa pokédex: pesquise, filtre e abra a ficha de cada um.</small>
+        <span class="tile-status">${MONSTERS.length} monstros</span>
+      </a>
+    </section>
+    <section class="box">
       <h2 class="box-title">Respostas de ontem</h2>
       <ul class="yesterday" id="yest"></ul>
     </section>

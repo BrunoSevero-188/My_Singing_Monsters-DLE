@@ -24,6 +24,7 @@ npm test         # testes das regras (cores, setas, dicas, combinação, sorteio
   "nome": "Noggin",
   "ilhas": ["Plant Island", "Air Island"],
   "classe": "Natural",
+  "raridade": "comum",
   "elementos": ["Earth"],
   "versao": "1.0.0",
   "ano": 2012,
@@ -42,6 +43,7 @@ npm test         # testes das regras (cores, setas, dicas, combinação, sorteio
 | `nome` | Nome do monstro |
 | `ilhas` | Lista das ilhas onde o monstro vive |
 | `classe` | Classe do monstro (ex.: `Natural`) |
+| `raridade` | `"comum"`, `"raro"` ou `"epico"` (aceita também `"épico"`, `"common"`, `"rare"`, `"epic"`). Aparece na Biblioteca e na tela de vitória. `null` se não souber |
 | `elementos` | Lista dos elementos (ex.: `["Air", "Plant"]`) |
 | `versao` | Versão do jogo em que o monstro foi lançado (ex.: `"1.2.0"`). `null` se não souber |
 | `ano` | Ano em que foi lançado (ex.: `2012`). `null` se não souber |
@@ -103,6 +105,30 @@ resposta, a célula fica cinza, sem seta.
 Mostra o `ovo` do monstro com as cores invertidas, e o jogador adivinha de qual monstro ele é. Dicas: elementos (5 tentativas)
 e classe (8). Para voltar a embaçar o ovo aos poucos, ajuste `BLUR` em `js/config.js` (ex.: `{ start: 8, step: 0.7, min: 2 }`).
 
+## Biblioteca (pokédex)
+
+A aba **Biblioteca** é uma pokédex de My Singing Monsters, adaptada do projeto `FlatlistPokedex` (Expo Router):
+
+| No Pokédex (React Native) | Na Biblioteca (site) | Arquivo |
+|---|---|---|
+| `PesquisarPokemon` (campo + condição + texto) | Pesquisa por **Nome, Nº, Elemento, Classe, Raridade, Ilha, Ano e Versão**, com Igual / Diferente / Contém (e Maior / Menor... nos números) | `js/ui/library.js`, `js/core/library.js` |
+| `ButtonandSelect` (filtro por tipo colorido) | Botões coloridos de **elemento** e de **raridade** (combinam com a pesquisa) | `js/ui/library.js` |
+| `PokemonList` + `PokemonItem` (FlatList, cartão em degradê) | Grade de cartões em degradê pelos elementos, ícone num círculo, `#001`, nome, selos de elemento e de raridade | `js/ui/library.js`, `css/style.css` |
+| `[id].tsx` (tela de detalhes) | Ficha em `#biblioteca/<id>`: cabeçalho em degradê, botão Voltar, gif sobrepondo o cabeçalho, informações gerais, ilhas, barras e "Como obter" | `js/ui/library.js` |
+| `usePokemonDetalhes` / `montarDetalhes` | Monta os dados da ficha a partir do JSON (sem rede) | `js/core/library.js` |
+| tipos do Pokémon | **elementos** (e classe) | `js/core/library.js` |
+| altura, peso, experiência | **raridade, versão, ano, classe** | ficha |
+| habilidades | **ilhas** onde o monstro vive | ficha |
+| estatísticas base (barras) | **Em números**: elementos (de 5) e ilhas (do total do JSON) | ficha |
+| principais movimentos | **Como obter**: combinações, com link para cada monstro (ou "Comprado") | ficha |
+
+Cores de elementos: `ELEMENT_COLORS` em `js/core/library.js`. Cores de raridade: `RARITY_COLORS` em `js/core/rarity.js`.
+O ícone vem de `icone`; a ficha mostra o `gif` (ou o ícone, se não houver gif). Os links `#biblioteca/3` funcionam direto
+e o botão voltar do navegador também; a pesquisa é mantida ao voltar para a lista.
+
+Atenção: a Biblioteca mostra **todos** os dados dos monstros (elementos, ilhas, ano, combinações), o que ajuda
+a adivinhar o monstro do dia. Se isso incomodar, remova a aba em `js/app.js` ou limite os campos mostrados na ficha.
+
 ## Dica de Jogo (botão "?")
 
 O botão **?** no canto esquerdo do topo abre a explicação de como jogar. Os textos ficam em `js/ui/how-to.js`
@@ -128,6 +154,9 @@ js/
   data/monsters.js         # lê o JSON (português) e converte para o formato interno
   modes/                   # um arquivo por desafio + registro em index.js
   ui/                      # faixa dos brasileiros, tela inicial, infobox, dicas, "?" (Dica de Jogo)
+  ui/library.js            # Biblioteca: lista, pesquisa, filtros e ficha de detalhes
+  core/library.js          # Biblioteca: filtros, cores dos elementos, montagem da ficha
+  core/rarity.js           # raridade (comum, raro, épico)
 scripts/check.mjs          # validação antes de publicar
 scripts/migrar-json.mjs    # converte o JSON antigo para o formato atual
 tests/                     # node:test
@@ -148,9 +177,9 @@ Lembre de commitar `data/`.
 ## Atualizando de uma versão anterior
 
 1. Extraia o zip por cima do projeto. **O seu `data/monsters.json` não é sobrescrito** (o zip só traz o exemplo).
-2. Rode `npm run migrar`: `data`/`lancamento` viram `ano` (só o ano), `imagem` vira `icone`, entram `gif`, `ovo`
+2. Rode `npm run migrar`: `data`/`lancamento` viram `ano` (só o ano), `imagem` vira `icone`, entram `raridade`, `gif`, `ovo`
    e `combinacao` vazios, e o que mais você tiver no JSON é mantido. A cópia de segurança fica em `data/monsters.backup.json`.
-3. Preencha `versao`, `ano`, `icone`, `gif`, `ovo` e `combinacao` e rode `npm run check`.
+3. Preencha `raridade`, `versao`, `ano`, `icone`, `gif`, `ovo` e `combinacao` e rode `npm run check`.
 4. O modo "Monstro invertido" virou **Ovo invertido** (id novo): as estatísticas do modo antigo não são aproveitadas.
 5. Apague o que não é mais usado: `js/modes/inverted.js`, `scripts/sync-wiki.mjs`, `scripts/ping-wiki.mjs`,
    `scripts/make-schedule.mjs`, `scripts/check-imports.mjs`, a pasta `scripts/lib/`, `data/schedule.json`,

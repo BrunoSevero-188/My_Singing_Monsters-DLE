@@ -1,6 +1,6 @@
 // Converte o seu data/monsters.json para o formato atual, SEM perder o que você já preencheu.
 //   data / lancamento  ->  ano (só o ano)      imagem  ->  icone
-//   campos novos (vazios): versao, gif, ovo, combinacao
+//   campos novos (vazios): raridade, versao, gif, ovo, combinacao
 // Faz uma cópia de segurança em data/monsters.backup.json antes de gravar.
 // Uso: npm run migrar
 import { readFile, writeFile, access } from 'node:fs/promises';
@@ -23,9 +23,11 @@ const year = (v) => {
 };
 
 const out = list.map((m) => {
-  const { id, nome, ilhas, classe, elementos, versao, ano, data, icone, gif, ovo, combinacao, lancamento, imagem, ...resto } = m;
+  const { id, nome, ilhas, classe, raridade, elementos, versao, ano, data, icone, gif, ovo, combinacao, lancamento, imagem, ...resto } = m;
   return {
-    id, nome, ilhas, classe, elementos,
+    id, nome, ilhas, classe,
+    raridade: raridade ?? null,                // "comum", "raro" ou "epico"
+    elementos,
     versao: versao ?? null,                    // ex.: "1.0.0": versão do jogo em que foi lançado
     ano: ano ?? year(data ?? lancamento),      // ex.: 2012: ano de lançamento
     icone: icone ?? imagem ?? null,            // URL do ícone (célula "Monstro")
@@ -41,4 +43,4 @@ await writeFile(FILE, JSON.stringify(out, null, 2) + '\n');
 const falta = (k) => out.filter((m) => m[k] == null).length;
 console.log(`✔ ${out.length} monstros migrados para o formato atual.`);
 console.log(`  Cópia de segurança: ${backup}`);
-console.log(`  Faltam preencher: versao (${falta('versao')}), ano (${falta('ano')}), icone (${falta('icone')}), gif (${falta('gif')}), ovo (${falta('ovo')}), combinacao (${falta('combinacao')})`);
+console.log(`  Faltam preencher: raridade (${falta('raridade')}), versao (${falta('versao')}), ano (${falta('ano')}), icone (${falta('icone')}), gif (${falta('gif')}), ovo (${falta('ovo')}), combinacao (${falta('combinacao')})`);

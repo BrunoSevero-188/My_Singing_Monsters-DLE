@@ -3,6 +3,7 @@
 import { readdir, readFile, access } from 'node:fs/promises';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { toRarity } from '../js/core/rarity.js';
 
 let errors = 0;
 let warnings = 0;
@@ -55,7 +56,7 @@ if (list) {
     for (const m of list) { if (Number.isInteger(m.id)) ids.add(m.id); if (m.nome) names.add(m.nome.toLowerCase()); }
     const seenIds = new Set();
     const seenNames = new Set();
-    const count = { versao: 0, ano: 0, icone: 0, gif: 0, ovo: 0, combinacao: 0, legacy: 0 };
+    const count = { raridade: 0, versao: 0, ano: 0, icone: 0, gif: 0, ovo: 0, combinacao: 0, legacy: 0 };
     const missingFiles = [];
 
     for (const [i, m] of list.entries()) {
@@ -72,6 +73,9 @@ if (list) {
       if (!Array.isArray(m.ilhas) || !m.ilhas.length) err(`${where}: "ilhas" precisa ser uma lista com ao menos 1 item.`);
       if (!m.classe || (Array.isArray(m.classe) && !m.classe.length)) err(`${where}: falta "classe".`);
       if (!Array.isArray(m.elementos) || !m.elementos.length) err(`${where}: "elementos" precisa ser uma lista com ao menos 1 item.`);
+
+      if (m.raridade == null || m.raridade === '') count.raridade++;
+      else if (!toRarity(m.raridade)) err(`${where}: "raridade" inválida ("${m.raridade}"). Use comum, raro ou epico.`);
 
       if ('data' in m || 'lancamento' in m || 'imagem' in m) count.legacy++;
 
@@ -108,6 +112,7 @@ if (list) {
 
     if (count.legacy) warn(`${count.legacy} monstro(s) com campos antigos ("data"/"lancamento"/"imagem"). Rode "npm run migrar".`);
     const falta = (n, msg) => (n ? warn(`${n} monstro(s) sem ${msg}`) : null);
+    falta(count.raridade, '"raridade" (comum, raro ou epico): não aparece no selo nem no filtro da Biblioteca.');
     falta(count.versao, '"versao" (a coluna Versão fica cinza para eles).');
     falta(count.ano, '"ano" (a coluna Ano fica cinza para eles).');
     falta(count.icone, '"icone" (a célula Monstro mostra só o nome).');

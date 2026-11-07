@@ -39,23 +39,40 @@ async function init() {
   try { (await import('./ui/help.js')).mountHelp(document.getElementById('help-slot')); }
   catch (e) { console.warn('help.js indisponível:', e); }
 
+  let libMod = null;
+  try { libMod = await import('./ui/library.js'); }
+  catch (e) { console.warn('library.js indisponível:', e); }
+
   let ready = false;
 
-  function show(id) {
+  // Rotas: home · <modo> · biblioteca · biblioteca/<id>
+  let ignorar = 0; // hashchange causado pelo próprio show() não renderiza de novo
+
+  function show(route) {
     if (!ready) return;
-    const mode = MODES.find((m) => m.id === id);
-    const target = mode ? mode.id : 'home';
-    location.hash = target;
+    const [nome, arg] = String(route).split('/');
+    const mode = MODES.find((m) => m.id === nome);
+    const isLib = nome === 'biblioteca' && !!libMod;
+    const target = mode ? mode.id : isLib ? 'biblioteca' : 'home';
+    const full = isLib && arg ? `biblioteca/${arg}` : target;
+    if (location.hash.slice(1) !== full) { ignorar++; location.hash = full; }
     nav.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b.dataset.id === target));
     game.innerHTML = '';
     try {
       if (mode) mode.render(game);
+      else if (isLib) libMod.renderLibrary(game, arg);
       else homeMod.renderHome(game, show);
     } catch (e) {
-      fail(`Erro ao abrir "${target}"`, e);
+      fail(`Erro ao abrir "${full}"`, e);
     }
     window.scrollTo({ top: 0 });
   }
+
+  // Links como #biblioteca/3 e o botão "voltar" do navegador
+  window.addEventListener('hashchange', () => {
+    if (ignorar > 0) { ignorar--; return; }
+    show(location.hash.slice(1));
+  });
 
   function showAllDone() {
     if (document.querySelector('dialog.all-done')) return;
@@ -89,7 +106,7 @@ async function init() {
   });
 
   // Os botões aparecem antes dos dados carregarem
-  [{ id: 'home', label: 'Início' }, ...MODES].forEach((m) => {
+  [{ id: 'home', label: 'Início' }, ...MODES, ...(libMod ? [{ id: 'biblioteca', label: 'Biblioteca' }] : [])].forEach((m) => {
     const b = document.createElement('button');
     b.textContent = m.label;
     b.dataset.id = m.id;
