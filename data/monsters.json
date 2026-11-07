@@ -979,8 +979,7 @@
   {
     "id": 50,
     "nome": "Jeeode",
-    "ilhas": ["Ilha de Água",
-      "Ilha de Água Espelhada", "Ilha Etérea", "Coliseu da Canção", "Ilha de Água Espelhada"]
+    "ilhas": ["Ilha de Água", "Ilha de Água Espelhada", "Ilha Etérea", "Coliseu da Canção", "Ilha de Água Espelhada"],
     "elementos": ["Cristal"],
     "versao": "1.2.0",
     "ano": 2013,
@@ -1384,8 +1383,7 @@
   {
     "id": 81,
     "nome": "Blabbit",
-    "ilhas": ["Ilha de Água",
-      "Ilha de Água Espelhada", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal", "Ilha de Água Espelhada"]
+    "ilhas": ["Ilha de Água", "Ilha de Água Espelhada", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal", "Ilha de Água Espelhada"],
     "elementos": ["Ovos-Travaganza"],
     "versao": "1.2.0",
     "ano": 2013,
