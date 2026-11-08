@@ -23,11 +23,12 @@ const year = (v) => {
 };
 
 const out = list.map((m) => {
-  const { id, nome, ilhas, classe, raridade, elementos, versao, ano, data, icone, gif, ovo, combinacao, lancamento, imagem, ...resto } = m;
+  const { id, nome, ilhas, classe, raridade, descricao, elementos, versao, ano, data, icone, gif, ovo, combinacao, lancamento, imagem, ...resto } = m;
   return {
     id, nome, ilhas, classe,
     raridade: raridade ?? null,                // "comum", "raro" ou "epico"
     elementos,
+    descricao: m.descricao ?? null,                  // descrição do monstro (célula "Descrição")
     versao: versao ?? null,                    // ex.: "1.0.0": versão do jogo em que foi lançado
     ano: ano ?? year(data ?? lancamento),      // ex.: 2012: ano de lançamento
     icone: icone ?? imagem ?? null,            // URL do ícone (célula "Monstro")

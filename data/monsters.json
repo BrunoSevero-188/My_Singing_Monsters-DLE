@@ -1543,14 +1543,20 @@
   {
     "id": 92,
     "nome": "Spurrit",
-    "ilhas": ["Oásis de Fogo", "Coliseu da Canção", "Ilha de Ouro", "Cabana Sazonal"],
+    "ilhas": ["Oásis de Fogo", "Cabana Sazonal"],
     "classe": "Sazonal",
+    "raridade": "Comum",
+    "descricao": "No início dos anos 1900, um explorador inglês chamado Dr. Wardin E. Spurrit tornou-se o primeiro 
+    humano a ter contato físico com o Mundo dos Monstros.  Ele estudava monstros captando frequências interdimensionais 
+    com um rádio modificado e criou um dispositivo chamado S.E.W. (Separating Existence Widget), que abria portais entre 
+    os mundos.  Na última viagem, ele perdeu o dispositivo no Rift, tornando sua aventura de mão única. 
+    Acredita-se fortemente que o Spurrit é o resultado da mutação mágica de Wardin após centenas de anos no Mundo dos Monstros, influenciada pela ingestão das águas do Living Ocean. Todos os seus dentes caíram com o tempo devido a essas águas.",
     "elementos": ["Perplexplora"],
-    "versao": "3.6.0",
+    "versao": "3.5.0",
     "ano": 2022,
-    "icone": null,
-    "gif": null,
-    "ovo": null,
+    "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/f/f8/Spurrit_Portrait.png/revision/latest/scale-to-width-down/60?cb=20220525161547",
+    "gif": "https://static.wikia.nocookie.net/mysingingmonsters/images/6/62/SpurritIdle.gif/revision/latest?cb=20241118024241",
+    "ovo": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/1d/Spurrit-egg.png/revision/latest/scale-to-width-down/60?cb=20220525204551",
     "combinacao": ["Piscadela + Bocarra", "Bambolinho + Coelhinho do Ninho"]
   }
 ]

@@ -25,6 +25,11 @@ export const fmtYear = (y) => (y == null ? '—' : String(y));
 export function compare(guess, answer, key) {
   if (key === 'name') return guess.id === answer.id ? 'correct' : 'wrong';
 
+  if (key === 'rarity') {
+    if (guess.rarity == null || answer.rarity == null || guess.rarity === '' || answer.rarity === '') return 'unknown';
+    return guess.rarity === answer.rarity ? 'correct' : 'wrong';
+  }
+
   if (key === 'version') {
     const g = parseVersion(guess.version), a = parseVersion(answer.version);
     if (!g || !a) return 'unknown';

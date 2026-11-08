@@ -1,4 +1,5 @@
 import { WIKI_BASE } from '../config.js';
+import { toRarity } from '../core/rarity.js';
 
 export const DATA_URL = 'data/monsters.json';
 export let MONSTERS = [];
@@ -6,23 +7,7 @@ export let MONSTERS = [];
 export const slug = (s) =>
   s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-function normalize(raw) {
-  const icon = raw.icone || raw.imagem || `assets/monsters/${slug(raw.nome)}.png`;
-  return {
-    id: raw.id,
-    name: raw.nome,
-    islands: raw.ilhas ?? [],
-    type: raw.classe,
-    elements: raw.elementos ?? [],
-    version: toVersion(raw.versao),
-    year: toYear(raw.data ?? raw.lancamento),
-    icon,
-    gif: raw.gif || null,
-    image: icon,
-    combinacao: Array.isArray(raw.combinacao) ? raw.combinacao : [],
-    wiki: `${WIKI_BASE}/wiki/${encodeURIComponent(raw.nome.replace(/ /g, '_'))}`,
-  };
-}
+const text = (v) => (v == null || String(v).trim() === '' ? null : String(v).trim());
 
 function toYear(value) {
   if (value == null || value === '') return null;
@@ -31,28 +16,41 @@ function toYear(value) {
 }
 
 function toVersion(value) {
-  if (value == null || String(value).trim() === '') return null;
-  return String(value).trim().replace(/^v/i, '');
+  const version = text(value);
+  return version ? version.replace(/^v/i, '') : null;
 }
 
-function findCombinations(monster, monsters) {
-  if (monster.combinacao.length) return monster.combinacao.slice(0, 2);
-  const target = new Set(monster.elements);
-  const matches = [];
-  for (let i = 0; i < monsters.length; i++) {
-    const first = monsters[i];
-    if (first.id === monster.id || first.elements.length >= target.size) continue;
-    for (let j = i + 1; j < monsters.length; j++) {
-      const second = monsters[j];
-      if (second.id === monster.id || second.elements.length >= target.size) continue;
-      const union = new Set([...first.elements, ...second.elements]);
-      if (union.size === target.size && [...target].every((element) => union.has(element))) {
-        matches.push(`${first.name} + ${second.name}`);
-      }
-    }
-  }
-  if (!matches.length && target.size === 1) matches.push(`${monster.name} + ${monster.name}`);
-  return matches.slice(0, 2);
+function toCombo(value) {
+  if (value == null) return null;
+  if (typeof value === 'string') return /^comprad/i.test(value.trim()) ? 'buy' : null;
+  if (!Array.isArray(value)) return null;
+  if (!value.length) return 'buy';
+  if (value.length === 1 && typeof value[0] === 'string' && /^comprad/i.test(value[0])) return 'buy';
+  const pairs = value.filter((pair) => Array.isArray(pair) && pair.length === 2);
+  return pairs.length ? pairs : null;
+}
+
+function normalize(raw) {
+  const icon = text(raw.icone) ?? text(raw.imagem);
+  const rarity = toRarity(raw.raridade) ?? 'comum';
+  raw.raridade = rarity;
+  return {
+    id: raw.id,
+    name: raw.nome,
+    islands: raw.ilhas ?? [],
+    type: raw.classe,
+    rarity,
+    elements: raw.elementos ?? [],
+    version: toVersion(raw.versao),
+    year: toYear(raw.ano ?? raw.data ?? raw.lancamento),
+    icon,
+    gif: text(raw.gif),
+    egg: text(raw.ovo),
+    combo: toCombo(raw.combinacao),
+    image: icon,
+    combinacao: Array.isArray(raw.combinacao) ? raw.combinacao : [],
+    wiki: `${WIKI_BASE}/wiki/${encodeURIComponent(raw.nome.replace(/ /g, '_'))}`,
+  };
 }
 
 export async function loadMonsters() {
@@ -61,10 +59,6 @@ export async function loadMonsters() {
   const raw = await res.json();
   if (!Array.isArray(raw) || !raw.length) throw new Error(`${DATA_URL} está vazio ou fora do formato (esperado: uma lista de monstros).`);
   MONSTERS = raw.map(normalize);
-  MONSTERS.forEach((monster) => {
-    monster.combinacao = findCombinations(monster, MONSTERS);
-    monster.combination = monster.combinacao;
-  });
 }
 
 const uniq = (arr) => [...new Set(arr)].sort();
