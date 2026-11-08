@@ -1546,11 +1546,7 @@
     "ilhas": ["Oásis de Fogo", "Cabana Sazonal"],
     "classe": "Sazonal",
     "raridade": "Comum",
-    "descricao": "No início dos anos 1900, um explorador inglês chamado Dr. Wardin E. Spurrit tornou-se o primeiro 
-    humano a ter contato físico com o Mundo dos Monstros.  Ele estudava monstros captando frequências interdimensionais 
-    com um rádio modificado e criou um dispositivo chamado S.E.W. (Separating Existence Widget), que abria portais entre 
-    os mundos.  Na última viagem, ele perdeu o dispositivo no Rift, tornando sua aventura de mão única. 
-    Acredita-se fortemente que o Spurrit é o resultado da mutação mágica de Wardin após centenas de anos no Mundo dos Monstros, influenciada pela ingestão das águas do Living Ocean. Todos os seus dentes caíram com o tempo devido a essas águas.",
+    "descricao": [""] ,
     "elementos": ["Perplexplora"],
     "versao": "3.5.0",
     "ano": 2022,
