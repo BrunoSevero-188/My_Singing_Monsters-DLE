@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark" />
   <title>MSMdle · Desafios diários de My Singing Monsters em português</title>
   <meta name="description" content="Desafios diários de My Singing Monsters, feitos por brasileiros e em português do Brasil. Descubra o monstro do dia!" />
+  <meta name="theme-color" content="#14102b" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://static.wikia.nocookie.net" />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/features.css" />
+  <link rel="stylesheet" href="css/polish.css" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:title" content="MSMdle · My Singing Monsters em português" />
   <meta property="og:description" content="Descubra o monstro do dia. Um site de fãs, feito por brasileiros." />
-  <meta name="theme-color" content="#14102b" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/features.css" />
+  <meta property="og:image" content="https://static.wikia.nocookie.net/mysingingmonsters/images/d/d9/MSM_Logo.png/revision/latest/scale-to-width-down/250?cb=20241114050213" />
+  <meta name="twitter:card" content="summary" />
 </head>
 <body>
+  <a class="skip-link" href="#game">Pular para o conteúdo</a>
   <header class="topbar">
-    <a class="brand" href="#home"><img class="brand-logo" src="https://static.wikia.nocookie.net/mysingingmonsters/images/d/d9/MSM_Logo.png/revision/latest/scale-to-width-down/250?cb=20241114050213" alt="My Singing Monsters" /><span class="brand-name">MSM<span>dle</span></span></a>
+    <a class="brand" href="#home" aria-label="MSMdle — início">
+      <img class="brand-logo" src="https://static.wikia.nocookie.net/mysingingmonsters/images/d/d9/MSM_Logo.png/revision/latest/scale-to-width-down/250?cb=20241114050213" alt="" referrerpolicy="no-referrer" />
+      <span class="brand-name">MSM<span>dle</span></span>
+    </a>
     <nav id="nav" aria-label="Modos de jogo"></nav>
   </header>
 
@@ -39,7 +49,7 @@
     <form method="dialog"><button class="pill">Fechar</button></form>
   </dialog>
 
-  <main id="game"></main>
+  <main id="game" tabindex="-1"></main>
 
   <footer class="site-footer">
     <p class="made-in">
@@ -51,7 +61,7 @@
       Feito por brasileiros, em português do Brasil.
     </p>
     <p>Site de fãs que acompanha My Singing Monsters, sem vínculo com a Big Blue Bubble. Os nomes e a arte dos monstros pertencem a ela.</p>
-    <p>Dados e imagens: <a href="https://mysingingmonsters.fandom.com/pt-br/wiki/My_Singing_Monsters_Wiki" target="_blank" rel="noopener">My Singing Monsters Wiki</a> (Fandom), texto sob CC-BY-SA.</p>
+    <p>Dados e imagens: <a href="https://mysingingmonsters.fandom.com/pt-br/wiki/My_Singing_Monsters_Wiki" target="_blank" rel="noopener noreferrer">My Singing Monsters Wiki</a> (Fandom), texto sob CC-BY-SA.</p>
   </footer>
 
   <noscript>Este site precisa de JavaScript para funcionar.</noscript>
