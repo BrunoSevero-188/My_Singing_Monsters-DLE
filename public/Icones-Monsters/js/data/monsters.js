@@ -7,7 +7,7 @@ export let MONSTERS = [];
 export const slug = (s) =>
   s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
-const text = (v) => (v == null || String(v).trim() === '' ? null : String(v).trim());
+const text = (value) => (value == null || String(value).trim() === '' ? null : String(value).trim());
 
 function toYear(value) {
   if (value == null || value === '') return null;
@@ -37,6 +37,7 @@ function normalize(raw) {
   return {
     id: raw.id,
     name: raw.nome,
+    description: text(raw.descricao),
     islands: raw.ilhas ?? [],
     type: raw.classe,
     rarity,

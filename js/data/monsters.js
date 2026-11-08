@@ -42,17 +42,18 @@ function normalize(raw) {
   return {
     id: raw.id,
     name: raw.nome,
+    description: text(raw.descricao), // texto livre opcional fornecido em data/monsters.json
     islands: raw.ilhas ?? [],
     type: raw.classe,
-    rarity: toRarity(raw.raridade),                          // 'comum' | 'raro' | 'epico' (ou null)
+    rarity: toRarity(raw.raridade),
     elements: raw.elementos ?? [],
-    version: toVersion(raw.versao),                          // versão do jogo em que foi lançado (ex.: "1.0.0")
-    year: toYear(raw.ano ?? raw.data ?? raw.lancamento),     // ano de lançamento (aceita os campos antigos)
-    icon,                                                    // URL do ícone: célula "Monstro" da tabela
-    gif: text(raw.gif),                                      // URL do gif: aparece quando o jogador acerta
-    egg: text(raw.ovo),                                      // URL do ovo: modo "Ovo invertido"
-    combo: toCombo(raw.combinacao),                          // como obter o monstro (dica 2 do Monstro do dia)
-    image: icon,                                             // alias usado pelos outros modos
+    version: toVersion(raw.versao),
+    year: toYear(raw.ano ?? raw.data ?? raw.lancamento),
+    icon,
+    gif: text(raw.gif),
+    egg: text(raw.ovo),
+    combo: toCombo(raw.combinacao),
+    image: icon,
     wiki: `${WIKI_BASE}/wiki/${encodeURIComponent(raw.nome.replace(/ /g, '_'))}`,
   };
 }
