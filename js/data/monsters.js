@@ -28,12 +28,85 @@ function toVersion(v) {
 //   ausente / null                                      -> null (ainda não cadastrada)
 function toCombo(v) {
   if (v == null) return null;
-  if (typeof v === 'string') return /^comprad/i.test(v.trim()) ? 'buy' : null;
+
+  if (typeof v === 'string') {
+    return /^comprad/i.test(v.trim()) ? 'buy' : null;
+  }
+
   if (!Array.isArray(v)) return null;
   if (!v.length) return 'buy';
-  if (v.length === 1 && typeof v[0] === 'string' && /^comprad/i.test(v[0])) return 'buy';
-  const pairs = v.filter((p) => Array.isArray(p) && p.length === 2);
+
+  if (
+    v.length === 1 &&
+    typeof v[0] === 'string' &&
+    /^comprad/i.test(v[0])
+  ) {
+    return 'buy';
+  }
+
+  const pairs = v.flatMap((item) => {
+    if (Array.isArray(item) && item.length === 2) {
+      return [item];
+    }
+
+    if (typeof item === 'string' && item.includes('+')) {
+      const pair = item
+        .split('+')
+        .map((name) => name.trim())
+        .filter(Boolean);
+      return pair.length === 2 ? [pair] : [];
+    }
+    return [];
+  });
   return pairs.length ? pairs : null;
+}
+
+function toDescription(value) {
+  const values = Array.isArray(value) ? value : [value];
+
+  return values
+    .map((item) => text(item))
+    .filter(Boolean)
+    .join('\n') || null;
+}
+
+// Ícones opcionais de elementos e ilhas.
+export let ELEMENT_ISLAND_ICONS = {
+  elementos: [],
+  ilhas: []
+};
+
+async function loadElementIslandIcons() {
+  try {
+    const res = await fetch('data/elementos-ilhas.json');
+
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+
+    ELEMENT_ISLAND_ICONS = {
+      elementos: Array.isArray(data.elementos)
+        ? data.elementos
+        : [],
+
+      ilhas: Array.isArray(data.ilhas)
+        ? data.ilhas
+        : []
+    };
+
+  } catch (error) {
+    console.warn(
+      'Não foi possível carregar data/elementos-ilhas.json:',
+      error
+    );
+
+    ELEMENT_ISLAND_ICONS = {
+      elementos: [],
+      ilhas: []
+    };
+  }
 }
 
 // JSON em português -> formato interno usado pelo jogo
@@ -42,7 +115,7 @@ function normalize(raw) {
   return {
     id: raw.id,
     name: raw.nome,
-    description: text(raw.descricao), // texto livre opcional fornecido em data/monsters.json
+    description: toDescription(raw.descricao), // texto livre opcional fornecido em data/monsters.json
     islands: raw.ilhas ?? [],
     type: raw.classe,
     rarity: toRarity(raw.raridade),
@@ -66,6 +139,7 @@ export async function loadMonsters() {
     throw new Error(`${DATA_URL} está vazio ou fora do formato (esperado: uma lista de monstros).`);
   }
   MONSTERS = raw.map(normalize);
+  await loadElementIslandIcons();
 }
 
 const uniq = (arr) => [...new Set(arr)].sort();

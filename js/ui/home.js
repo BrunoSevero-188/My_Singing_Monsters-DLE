@@ -19,7 +19,7 @@ export function renderHome(root, onOpen) {
       <a class="tile lib-tile" href="#biblioteca">
         <span class="tile-icon">📚</span>
         <strong>Biblioteca de monstros</strong>
-        <small>Veja todos os monstros, como numa pokédex: pesquise, filtre e abra a ficha de cada um.</small>
+        <small>Veja todos os monstros, como uma biblioteca dos monstros.</small>
         <span class="tile-status">${MONSTERS.length} monstros</span>
       </a>
     </section>

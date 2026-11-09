@@ -82,7 +82,7 @@ function options(container, items, current, onPick) {
 function renderList(root) {
   root.innerHTML = `
     <h2 class="dex-title">Biblioteca</h2>
-    <p class="desc">Todos os monstros de My Singing Monsters, como numa pokédex.</p>
+    <p class="desc"></p>
 
     <section class="dex-search" aria-label="Pesquisar">
       <p class="dex-label">Pesquisar por</p>

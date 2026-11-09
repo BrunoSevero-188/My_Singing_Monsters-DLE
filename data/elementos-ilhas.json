@@ -1,0 +1,30 @@
+{
+  "elementos": [
+    {
+      "elemento": "Água",
+      "icone": "URL_DA_IMAGEM"
+    },
+    {
+      "elemento": "Ar",
+      "icone": "URL_DA_IMAGEM"
+    },
+    {
+      "elemento": "Planta",
+      "icone": "URL_DA_IMAGEM"
+    }
+  ],
+  "ilhas": [
+    {
+      "ilha": "Ilha de Planta",
+      "icone": "URL_DA_IMAGEM"
+    },
+    {
+      "ilha": "Ilha de Água",
+      "icone": "URL_DA_IMAGEM"
+    },
+    {
+      "ilha": "Ilha de Terra",
+      "icone": "URL_DA_IMAGEM"
+    }
+  ]
+}
