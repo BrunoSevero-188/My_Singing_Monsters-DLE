@@ -1,17 +1,157 @@
 {
   "elementos": [
     {
+      "elemento": "Terra",
+      "icone": ""
+    },
+    {
       "elemento": "Água",
-      "icone": "URL_DA_IMAGEM"
+      "icone": ""
     },
     {
       "elemento": "Ar",
-      "icone": "URL_DA_IMAGEM"
+      "icone": ""
     },
     {
       "elemento": "Planta",
-      "icone": "URL_DA_IMAGEM"
-    }
+      "icone": ""
+    },
+    {
+      "elemento": "Frio",
+      "icone": ""
+    },
+    {
+      "elemento": "Fogo",
+      "icone": ""
+    },
+    {
+      "elemento": "Psíquico",
+      "icone": ""
+    },
+    {
+      "elemento": "Osso",
+      "icone": ""
+    },
+    {
+      "elemento": "Fada",
+      "icone": ""
+    },
+    {
+      "elemento": "Luz",
+      "icone": ""
+    },
+    {
+      "elemento": "Mítico",
+      "icone": ""
+    },
+    {
+      "elemento": "Sonho",
+      "icone": ""
+    },
+    {
+      "elemento": "Plasma",
+      "icone": ""
+    },
+    {
+      "elemento": "Sombra",
+      "icone": ""
+    },
+    {
+      "elemento": "Mecanico",
+      "icone": ""
+    },
+    {
+      "elemento": "Cristal",
+      "icone": ""
+    },
+    {
+      "elemento": "Veneno",
+      "icone": ""
+    },
+    {
+      "elemento": "Controle",
+      "icone": ""
+    },
+    {
+      "elemento": "Farsa",
+      "icone": ""
+    },
+    {
+      "elemento": "Ruína",
+      "icone": ""
+    },
+    {
+      "elemento": "Profundidade",
+      "icone": ""
+    },
+    {
+      "elemento": "Eletricidade",
+      "icone": ""
+    },
+    {
+      "elemento": "Lendário",
+      "icone": ""
+      },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+      },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+      },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+      },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+      },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+    },
+    {
+      "elemento": "",
+      "icone": ""
+    },
   ],
   "ilhas": [
     {
