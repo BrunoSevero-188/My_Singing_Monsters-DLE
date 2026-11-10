@@ -2,22 +2,42 @@
   "elementos": [
     {
       "elemento": "Terra",
-      "icone": ""
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/c/ca/Earth_Element.png/revision/latest?cb=20260108042851"
+    },
+    {
+      "elemento": "Terra Primordial",
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/5/50/Primordial_Earth_Element.png/revision/latest?cb=20250219170157"
     },
     {
       "elemento": "Água",
-      "icone": ""
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/a/a9/Water_Element.png/revision/latest?cb=20260108044322"
+    },
+    {
+      "elemento": "Água Primordial",
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/3/3f/Primordial_Water_Element.png/revision/latest?cb=20250219170212"
     },
     {
       "elemento": "Ar",
-      "icone": ""
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/b/b6/Air_Element.png/revision/latest?cb=20260108044041"
+    },
+    {
+      "elemento": "Ar Primordial",
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/1/13/Primordial_Air_Element.png/revision/latest?cb=20250219170125"
     },
     {
       "elemento": "Planta",
-      "icone": ""
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/e/e9/Plant_Element.png/revision/latest?cb=20260108043418"
+    },
+    {
+      "elemento": "Planta Primordial",
+      "icone": "https://static.wikia.nocookie.net/mysingingmonsters/images/4/44/Primordial_Plant_Element.png/revision/latest?cb=20250219170015"
     },
     {
       "elemento": "Frio",
+      "icone": ""
+    },
+    {
+      "elemento": "Frio Primordial",
       "icone": ""
     },
     {
@@ -93,35 +113,35 @@
       "icone": ""
       },
     {
-      "elemento": "",
+      "elemento": "Espetráculo",
       "icone": ""
     },
     {
-      "elemento": "",
+      "elemento": "Festival Anual de Hei",
       "icone": ""
     },
     {
-      "elemento": "",
+      "elemento": "Cantiga de Verão",
       "icone": ""
       },
     {
-      "elemento": "",
+      "elemento": "Estação do Amor",
       "icone": ""
     },
     {
-      "elemento": "",
+      "elemento": "Batido do Além",
       "icone": ""
     },
     {
-      "elemento": "",
+      "elemento": "Extravagância dos Ovos",
       "icone": ""
       },
     {
-      "elemento": "",
+      "elemento": "Mês de Aniversário",
       "icone": ""
     },
     {
-      "elemento": "",
+      "elemento": "Elemento do Banquete de Brasas",
       "icone": ""
     },
     {
